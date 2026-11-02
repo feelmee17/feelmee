@@ -73,15 +73,43 @@
             container.appendChild(div);
             container.scrollTop = container.scrollHeight;
         }
-        function getAIResponse(input) {
+                function getAIResponse(input) {
             const lower = input.toLowerCase();
-            if (lower.includes('capek') || lower.includes('lelah') || lower.includes('tugas')) {
-                return `Wajar merasa lelah. Allah SWT berfirman:<br><br><strong>"Allah tidak membebani seseorang melainkan sesuai kesanggupannya..."</strong> (QS. Al-Baqarah: 286).<br><br>Semua lelahmu bernilai pahala. Istirahat sejenak ya. 🤍`;
-            } else if (lower.includes('sedih') || lower.includes('kecewa') || lower.includes('nangis')) {
-                return `Ingatlah pesan Allah:<br><br><strong>"Janganlah kamu bersedih, sesungguhnya Allah beserta kita."</strong> (QS. At-Tawbah: 40).<br><br>Ujian ini tanda Allah rindu doamu. Semangat ya! ✨`;
-            } else {
-                return `Apapun yang kamu hadapi, sandarkan segalanya kepada Allah. Rasulullah SAW bersabda:<br><br><strong>"Mohonlah pertolongan kepada Allah dan janganlah kamu merasa lemah."</strong> (HR. Muslim).<br><br>Ceritakan lagi apa yang kamu rasakan, aku mendengarkan. 🤍`;
+            
+            // Kategori 1: Lelah, Capek, Tugas, Sekolah, Kuliah, Kerja
+            if (lower.includes('cape') || lower.includes('lelah') || lower.includes('full') || lower.includes('sibuk') || lower.includes('tugas') || lower.includes('pusing') || lower.includes('kerja') || lower.includes('kuliah') || lower.includes('sekolah') || lower.includes('beban') || lower.includes('berat')) {
+                return `Peluk jauh secara virtual ya. Wajar sekali merasa lelah, dunia ini memang tempatnya berproses dan berlelah-lelah dalam kebaikan. Allah SWT berfirman:<br><br><strong>"Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya..."</strong> (QS. Al-Baqarah: 286).<br><br>Semua lelahmu hari ini dan perjuanganmu bernilai pahala besar di sisi-Nya. Tarik napas dalam-dalam, dan istirahat sejenak ya. 🤍`;
+            } 
+            // Kategori 2: Sedih, Kecewa, Nangis, Galau, Patah Hati, Sakit Hati
+            else if (lower.includes('sedih') || lower.includes('kecewa') || lower.includes('nangis') || lower.includes('galau') || lower.includes('sakit hati') || lower.includes('patah hati') || lower.includes('nyesek') || lower.includes('luka') || lower.includes('rugi')) {
+                return `Hatimu mungkin sedang terluka dan berat, tapi ingatlah bahwa Allah Maha Mendengar setiap isak tangismu. Allah berfirman:<br><br><strong>"Janganlah kamu bersedih, sesungguhnya Allah beserta kita."</strong> (QS. At-Tawbah: 40).<br><br>Ujian ini tanda Allah rindu mendengarkan rintihan doamu. Badai ini pasti berlalu membawa hikmah indah. ✨`;
+            } 
+            // Kategori 3: Sendiri, Kesepian, Gak ada yang peduli, Ditinggal
+            else if (lower.includes('sendiri') || lower.includes('kesepian') || lower.includes('sepi') || lower.includes('gak ada yang peduli') || lower.includes('diabaikan') || lower.includes('sendirian')) {
+                return `Meskipun rasanya sepi dan tidak ada manusia di sekitarmu, kamu tidak pernah benar-benar sendiri. Rasulullah SAW menyampaikan dalam hadis qudsi:<br><br><strong>"Aku sesuai persangkaan hamba-Ku kepada-Ku, dan Aku bersamanya jika ia mengingat-Ku."</strong> (HR. Bukhari & Muslim).<br><br>Ajak Allah ngobrol lewat doa ya, Dia sangat dekat dan selalu mendengarkanmu. 🤍`;
+            } 
+            // Kategori 4: Cemas, Takut, Khawatir, Overthinking, Panik, Ragu
+            else if (lower.includes('cemas') || lower.includes('takut') || lower.includes('khawatir') || lower.includes('overthinking') || lower.includes('panik') || lower.includes('ragu') || lower.includes('gelisah') || lower.includes('stres')) {
+                return `Rasa cemas dan *overthinking* itu wajar terjadi saat masa depan terasa abu-abu, tapi kembalikan semuanya kepada Sang Penguasa Hati. Allah SWT berfirman:<br><br><strong>"(Yaitu) orang-orang yang beriman dan hati mereka menjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram."</strong> (QS. Ar-Ra'd: 28).<br><br>Tenangkan hatimu, Allah sudah mengatur semuanya dengan sangat baik. 🌿`;
+            } 
+            // Kategori 5: Syukur, Senang, Alhamdulillah, Bahagia, Seru
+            else if (lower.includes('syukur') || lower.includes('senang') || lower.includes('alhamdulillah') || lower.includes('bahagia') || lower.includes('seru') || lower.includes('lega') || lower.includes('terima kasih')) {
+                return `Alhamdulillah! Ikut senang dan bersyukur mendengarnya. Allah berjanji akan menambah nikmat bagi hamba-Nya yang pandai bersyukur:<br><br><strong>"Sesungguhnya jika kamu bersyukur, pasti Kami akan menambah (nikmat) kepadamu..."</strong> (QS. Ibrahim: 7).<br><br>Terus sebarkan energi positif dan jangan lupa ucapkan Alhamdulillah atas kebaikan hari ini ya! 🌻`;
+            } 
+            // Kategori 6: Marah, Kesal, Emosi, Jengkel
+            else if (lower.includes('marah') || lower.includes('kesal') || lower.includes('emosi') || lower.includes('jengkel') || lower.includes('bosen') || lower.includes('bete')) {
+                return `Wajar jika amarah atau rasa kesal datang menguji kesabaranmu. Rasulullah SAW memberikan teladan penenang:<br><br><strong>"Janganlah marah, maka bagimu surga."</strong> (HR. Thabrani).<br><br>Tarik napas, basuh muka, atau ucapkan *Ta'awudz* agar hatimu kembali dingin dan tenang ya. Air tidak bisa dipadamkan dengan air. 💧`;
             }
+            // Kategori 7: Gagal, Putus Asa, Menyerah
+            else if (lower.includes('gagal') || lower.includes('putus asa') || lower.includes('menyerah') || lower.includes('buntu') || lower.includes('ambyar')) {
+                return `Jangan pernah merasa jalanmu buntu atau menyerah pada keadaan. Allah SWT memberikan harapan indah:<br><br><strong>"Karena sesungguhnya sesudah kesulitan itu ada kemudahan."</strong> (QS. Al-Insyirah: 5).<br><br>Kegagalan hari ini adalah batu loncatan menuju versi dirimu yang jauh lebih kuat. Bangkit lagi ya! ✨`;
+            }
+            // Kategori Default / Umum
+            else {
+                return `Aku mendengarkan setiap kata dari cerita dan perasaanmu. Apapun yang sedang kamu hadapi di dunia ini, sandarkan segalanya kepada Allah:<br><br><strong>"Barangsiapa bertakwa kepada Allah, niscaya Dia akan membukakan jalan keluar baginya."</strong> (QS. At-Talaq: 2).<br><br>Ceritakan lagi apa yang sedang mengganjal di hatimu, aku di sini selalu mendengarkan. 🤍`;
+            }
+                }
+            
         }
         function resetChat() {
             document.getElementById('chatSection').classList.add('hidden');
