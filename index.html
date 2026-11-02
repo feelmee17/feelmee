@@ -5,116 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>feelme - Cerita di sini, temukan maknanya</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelBlue: '#E2ECF8',
+                        pastelYellow: '#FEF3C7',
+                        navyText: '#2C3E50',
+                        softYellowBtn: '#FDE68A'
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Quicksand', sans-serif; background-color: #F4F8FC; color: #2C3E50; }
-        .chat-container::-webkit-scrollbar { width: 6px; }
-        .chat-container::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 10px; }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #F4F8FC;
+            color: #2C3E50;
+        }
+        .chat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        .chat-container::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <!-- Header / Navbar -->
     <header class="w-full py-6 px-8 md:px-16 flex items-center justify-between z-10">
         <div class="flex items-center space-x-3">
-            <span class="text-2xl font-bold tracking-wide text-blue-900 bg-amber-100 px-4 py-1.5 rounded-full shadow-sm">✨ feelme</span>
+            <span class="text-2xl font-bold tracking-wide text-blue-900 bg-pastelYellow px-4 py-1.5 rounded-full shadow-sm">
+                ✨ feelme
+            </span>
         </div>
     </header>
+    <!-- Main Content Area -->
     <main class="flex-grow flex flex-col items-center justify-center text-center px-4 md:px-8 relative z-10 -mt-10">
+        
+        <!-- Hero Section -->
         <div id="heroSection" class="w-full flex flex-col items-center">
             <div class="relative max-w-2xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-blue-900 tracking-tight mb-4">feelme</h1>
-                <div class="inline-block bg-amber-200/80 text-blue-900 font-semibold px-6 py-2 rounded-full text-sm mb-6">Cerita di sini, temukan maknanya. 🤍</div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-blue-900 tracking-tight mb-4">
+                    feelme
+                </h1>
+                <div class="inline-block bg-amber-200/80 text-blue-900 font-semibold px-6 py-2 rounded-full shadow-xs text-sm md:text-base mb-6 transform -rotate-1">
+                    Cerita di sini, temukan maknanya. 🤍
+                </div>
             </div>
-            <p class="text-gray-600 text-sm md:text-base max-w-md mx-auto mb-8">Curhat apa pun yang kamu rasakan, dan temukan pengingat dari Al-Qur'an dan hadis.</p>
-            <div class="w-full max-w-xl bg-white rounded-full shadow-lg border border-blue-100 p-2 flex items-center mb-6">
+
+            <p class="text-gray-600 text-sm md:text-base max-w-md mx-auto mb-8 font-medium">
+                Curhat apa pun yang kamu rasakan, dan temukan pengingat dari Al-Qur'an dan hadis.
+            </p>
+
+            <!-- Input Box Curhat Awal -->
+            <div class="w-full max-w-xl bg-white rounded-full shadow-lg border border-blue-100 p-2 flex items-center mb-6 transition-all focus-within:ring-2 focus-within:ring-amber-300">
                 <div class="pl-4 text-gray-400 text-xl">💬</div>
-                <input type="text" id="initialInput" placeholder="Aku sedang merasa ..." class="w-full px-4 py-3 bg-transparent focus:outline-none text-gray-700 text-sm">
-                <button onclick="startChat()" class="bg-amber-300 hover:bg-amber-400 text-blue-900 p-3 rounded-full transition cursor-pointer">➔</button>
+                <input type="text" id="initialInput" placeholder="Aku sedang merasa ..." 
+                       class="w-full px-4 py-3 bg-transparent focus:outline-none text-gray-700 placeholder-gray-400 text-sm md:text-base"
+                       onkeypress="if(event.key === 'Enter') startChat()">
+                <button onclick="startChat()" class="bg-amber-300 hover:bg-amber-400 text-blue-900 p-3 rounded-full transition shadow-sm flex items-center justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="inline-flex items-center space-x-2 bg-white/80 border border-blue-100 px-4 py-1.5 rounded-full text-xs text-gray-500 shadow-xs">
+                <span>🔒</span>
+                <span>Privasi kamu aman bersama kami</span>
+                <span class="text-rose-400">🤍</span>
             </div>
         </div>
+
+        <!-- Chat Room Section -->
         <div id="chatSection" class="w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-blue-100 flex flex-col h-[550px] hidden text-left mb-6 overflow-hidden">
             <div class="bg-blue-50 px-6 py-4 border-b border-blue-100 flex items-center justify-between">
-                <h3 class="font-bold text-blue-900">Teman Cerita & Penenang Hati</h3>
-                <button onclick="resetChat()" class="text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border">Keluar</button>
+                <div class="flex items-center space-x-3">
+                    <div class="bg-amber-200 text-blue-900 p-2 rounded-full text-sm">✨</div>
+                    <div>
+                        <h3 class="font-bold text-blue-900 text-sm md:text-base">Teman Cerita & Penenang Hati</h3>
+                        <p class="text-xs text-gray-500">Selalu ada pengingat indah dari Al-Qur'an & Hadis</p>
+                    </div>
+                </div>
+                <button onclick="resetChat()" class="text-xs text-gray-500 hover:text-blue-900 bg-white px-3 py-1.5 rounded-full border border-blue-100 transition">
+                    Selesai / Curhat Baru
+                </button>
             </div>
-            <div id="chatMessages" class="chat-container flex-grow p-4 overflow-y-auto space-y-4 bg-slate-50"></div>
-            <div class="p-4 bg-white border-t flex items-center space-x-2">
-                <input type="text" id="chatInput" placeholder="Ketik balasan..." class="flex-grow px-4 py-3 bg-slate-100 rounded-full text-sm focus:outline-none" onkeypress="if(event.key === 'Enter') sendMessage()">
-                <button onclick="sendMessage()" class="bg-amber-300 text-blue-900 p-3 rounded-full cursor-pointer">➔</button>
+
+            <div id="chatMessages" class="chat-container flex-grow p-4 md:p-6 overflow-y-auto space-y-4 bg-slate-50/50"></div>
+
+            <div class="p-4 bg-white border-t border-blue-100 flex items-center space-x-2">
+                <input type="text" id="chatInput" placeholder="Ketik balasan atau keluh kesahmu..." 
+                       class="flex-grow px-4 py-3 bg-slate-100 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm text-gray-700"
+                       onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()" class="bg-amber-300 hover:bg-amber-400 text-blue-900 p-3 rounded-full transition shadow-sm flex items-center justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                </button>
             </div>
         </div>
     </main>
-        <script>
+      <!-- JavaScript Interaktif -->
+    <script>
         function startChat() {
-            const val = document.getElementById('initialInput').value.trim();
-            if (!val) return;
+            const inputVal = document.getElementById('initialInput').value.trim();
+            if (!inputVal) return;
+
             document.getElementById('heroSection').classList.add('hidden');
             document.getElementById('chatSection').classList.remove('hidden');
-            appendMessage(val, 'user');
+
+            appendMessage(inputVal, 'user');
             document.getElementById('initialInput').value = '';
-            setTimeout(() => appendMessage(getAIResponse(val), 'ai'), 800);
+
+            setTimeout(() => {
+                const aiReply = getAIResponse(inputVal);
+                appendMessage(aiReply, 'ai');
+            }, 800);
         }
+
         function sendMessage() {
-            const val = document.getElementById('chatInput').value.trim();
-            if (!val) return;
-            appendMessage(val, 'user');
+            const inputVal = document.getElementById('chatInput').value.trim();
+            if (!inputVal) return;
+
+            appendMessage(inputVal, 'user');
             document.getElementById('chatInput').value = '';
-            setTimeout(() => appendMessage(getAIResponse(val), 'ai'), 900);
+
+            setTimeout(() => {
+                const aiReply = getAIResponse(inputVal);
+                appendMessage(aiReply, 'ai');
+            }, 900);
         }
+
         function appendMessage(text, sender) {
-            const container = document.getElementById('chatMessages');
-            const div = document.createElement('div');
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+
             if (sender === 'user') {
-                div.className = 'flex justify-end';
-                div.innerHTML = `<div class="bg-amber-100 text-blue-900 px-4 py-3 rounded-2xl max-w-xs text-sm">${text}</div>`;
+                messageDiv.className = 'flex justify-end';
+                messageDiv.innerHTML = `
+                    <div class="bg-amber-100 text-blue-900 px-4 py-3 rounded-2xl rounded-tr-none max-w-xs md:max-w-md text-sm shadow-xs">
+                        ${escapeHtml(text)}
+                    </div>
+                `;
             } else {
-                div.className = 'flex justify-start';
-                div.innerHTML = `<div class="bg-white text-gray-700 border border-blue-100 px-5 py-4 rounded-2xl max-w-md text-sm shadow-sm space-y-2"><div class="font-bold text-blue-900">✨ Pengingat untukmu:</div><div>${text}</div></div>`;
+                messageDiv.className = 'flex justify-start';
+                messageDiv.innerHTML = `
+                    <div class="bg-white text-gray-700 border border-blue-100 px-5 py-4 rounded-2xl rounded-tl-none max-w-sm md:max-w-lg text-sm shadow-sm space-y-2">
+                        <div class="font-bold text-blue-900 flex items-center space-x-1">
+                            <span>✨ Pengingat untukmu:</span>
+                        </div>
+                        <div class="text-gray-600 leading-relaxed">${text}</div>
+                    </div>
+                `;
             }
-            container.appendChild(div);
-            container.scrollTop = container.scrollHeight;
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-                function getAIResponse(input) {
+
+        function getAIResponse(input) {
             const lower = input.toLowerCase();
             
-            // Kategori 1: Lelah, Capek, Tugas, Sekolah, Kuliah, Kerja
             if (lower.includes('cape') || lower.includes('lelah') || lower.includes('full') || lower.includes('sibuk') || lower.includes('tugas') || lower.includes('pusing') || lower.includes('kerja') || lower.includes('kuliah') || lower.includes('sekolah') || lower.includes('beban') || lower.includes('berat')) {
                 return `Peluk jauh secara virtual ya. Wajar sekali merasa lelah, dunia ini memang tempatnya berproses dan berlelah-lelah dalam kebaikan. Allah SWT berfirman:<br><br><strong>"Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya..."</strong> (QS. Al-Baqarah: 286).<br><br>Semua lelahmu hari ini dan perjuanganmu bernilai pahala besar di sisi-Nya. Tarik napas dalam-dalam, dan istirahat sejenak ya. 🤍`;
             } 
-            // Kategori 2: Sedih, Kecewa, Nangis, Galau, Patah Hati, Sakit Hati
             else if (lower.includes('sedih') || lower.includes('kecewa') || lower.includes('nangis') || lower.includes('galau') || lower.includes('sakit hati') || lower.includes('patah hati') || lower.includes('nyesek') || lower.includes('luka') || lower.includes('rugi')) {
                 return `Hatimu mungkin sedang terluka dan berat, tapi ingatlah bahwa Allah Maha Mendengar setiap isak tangismu. Allah berfirman:<br><br><strong>"Janganlah kamu bersedih, sesungguhnya Allah beserta kita."</strong> (QS. At-Tawbah: 40).<br><br>Ujian ini tanda Allah rindu mendengarkan rintihan doamu. Badai ini pasti berlalu membawa hikmah indah. ✨`;
             } 
-            // Kategori 3: Sendiri, Kesepian, Gak ada yang peduli, Ditinggal
             else if (lower.includes('sendiri') || lower.includes('kesepian') || lower.includes('sepi') || lower.includes('gak ada yang peduli') || lower.includes('diabaikan') || lower.includes('sendirian')) {
                 return `Meskipun rasanya sepi dan tidak ada manusia di sekitarmu, kamu tidak pernah benar-benar sendiri. Rasulullah SAW menyampaikan dalam hadis qudsi:<br><br><strong>"Aku sesuai persangkaan hamba-Ku kepada-Ku, dan Aku bersamanya jika ia mengingat-Ku."</strong> (HR. Bukhari & Muslim).<br><br>Ajak Allah ngobrol lewat doa ya, Dia sangat dekat dan selalu mendengarkanmu. 🤍`;
             } 
-            // Kategori 4: Cemas, Takut, Khawatir, Overthinking, Panik, Ragu
             else if (lower.includes('cemas') || lower.includes('takut') || lower.includes('khawatir') || lower.includes('overthinking') || lower.includes('panik') || lower.includes('ragu') || lower.includes('gelisah') || lower.includes('stres')) {
                 return `Rasa cemas dan *overthinking* itu wajar terjadi saat masa depan terasa abu-abu, tapi kembalikan semuanya kepada Sang Penguasa Hati. Allah SWT berfirman:<br><br><strong>"(Yaitu) orang-orang yang beriman dan hati mereka menjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram."</strong> (QS. Ar-Ra'd: 28).<br><br>Tenangkan hatimu, Allah sudah mengatur semuanya dengan sangat baik. 🌿`;
             } 
-            // Kategori 5: Syukur, Senang, Alhamdulillah, Bahagia, Seru
             else if (lower.includes('syukur') || lower.includes('senang') || lower.includes('alhamdulillah') || lower.includes('bahagia') || lower.includes('seru') || lower.includes('lega') || lower.includes('terima kasih')) {
                 return `Alhamdulillah! Ikut senang dan bersyukur mendengarnya. Allah berjanji akan menambah nikmat bagi hamba-Nya yang pandai bersyukur:<br><br><strong>"Sesungguhnya jika kamu bersyukur, pasti Kami akan menambah (nikmat) kepadamu..."</strong> (QS. Ibrahim: 7).<br><br>Terus sebarkan energi positif dan jangan lupa ucapkan Alhamdulillah atas kebaikan hari ini ya! 🌻`;
             } 
-            // Kategori 6: Marah, Kesal, Emosi, Jengkel
             else if (lower.includes('marah') || lower.includes('kesal') || lower.includes('emosi') || lower.includes('jengkel') || lower.includes('bosen') || lower.includes('bete')) {
                 return `Wajar jika amarah atau rasa kesal datang menguji kesabaranmu. Rasulullah SAW memberikan teladan penenang:<br><br><strong>"Janganlah marah, maka bagimu surga."</strong> (HR. Thabrani).<br><br>Tarik napas, basuh muka, atau ucapkan *Ta'awudz* agar hatimu kembali dingin dan tenang ya. Air tidak bisa dipadamkan dengan air. 💧`;
             }
-            // Kategori 7: Gagal, Putus Asa, Menyerah
             else if (lower.includes('gagal') || lower.includes('putus asa') || lower.includes('menyerah') || lower.includes('buntu') || lower.includes('ambyar')) {
                 return `Jangan pernah merasa jalanmu buntu atau menyerah pada keadaan. Allah SWT memberikan harapan indah:<br><br><strong>"Karena sesungguhnya sesudah kesulitan itu ada kemudahan."</strong> (QS. Al-Insyirah: 5).<br><br>Kegagalan hari ini adalah batu loncatan menuju versi dirimu yang jauh lebih kuat. Bangkit lagi ya! ✨`;
             }
-            // Kategori Default / Umum
             else {
                 return `Aku mendengarkan setiap kata dari cerita dan perasaanmu. Apapun yang sedang kamu hadapi di dunia ini, sandarkan segalanya kepada Allah:<br><br><strong>"Barangsiapa bertakwa kepada Allah, niscaya Dia akan membukakan jalan keluar baginya."</strong> (QS. At-Talaq: 2).<br><br>Ceritakan lagi apa yang sedang mengganjal di hatimu, aku di sini selalu mendengarkan. 🤍`;
             }
-                }
-            
         }
+
         function resetChat() {
             document.getElementById('chatSection').classList.add('hidden');
             document.getElementById('heroSection').classList.remove('hidden');
             document.getElementById('chatMessages').innerHTML = '';
+            document.getElementById('initialInput').value = '';
+        }
+
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
         }
     </script>
 </body>
