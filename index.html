@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>FeelMe — Curhat Islami, Hatimu Didengar</title>
-<meta name="description" content="FeelMe: teman curhat interaktif yang merespons keluh kesahmu secara berkelanjutan dengan ayat Al-Qur'an, hadis, dan penenang hati.">
+<title>FeelMe — Teman Curhat Islami Paling Nyambung</title>
+<meta name="description" content="FeelMe: Tempat curhat interaktif ala bestie dengan solusi aksi nyata, ayat Al-Qur'an, dan hadis yang spesifik sesuai masalahmu.">
 <meta name="theme-color" content="#070b1f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,191 +34,182 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .nav ul{display:flex;gap:26px;list-style:none;font-size:.92rem;color:var(--muted)}
 .nav ul a{text-decoration:none;transition:color .2s}
 .nav ul a:hover{color:var(--gold2)}
-.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;transition:transform .2s,box-shadow .25s,background .25s}
+.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;transition:transform .2s,box-shadow .25s,background .25s}
 .btn-gold{background:linear-gradient(135deg,#ffd877,#f0a93c);color:#2a1a00;box-shadow:0 8px 30px -8px rgba(246,198,103,.6)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(246,198,103,.75)}
-.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.05)}
+.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:.85rem;padding:8px 16px}
 .btn-ghost:hover{background:rgba(255,255,255,.11);transform:translateY(-2px)}
 @media(max-width:720px){.nav ul{display:none}}
-  }
   /* HERO */
-.hero{padding:clamp(40px,8vw,90px) 0 40px}
+.hero{padding:clamp(30px,6vw,70px) 0 30px}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);font-weight:600}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.5rem,6.2vw,4.7rem);line-height:1.04;margin:14px 0 18px;letter-spacing:-.02em}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.3rem,5.5vw,4.2rem);line-height:1.04;margin:14px 0 16px;letter-spacing:-.02em}
 .hero h1 em{font-style:italic;background:linear-gradient(120deg,#ffe3a3,#f6a93c 55%,#ffd1e0);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{color:var(--muted);font-size:1.08rem;max-width:520px}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}
-.pills{display:flex;gap:10px;flex-wrap:wrap}
-.pill{font-size:.8rem;padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.04)}
-.hero-art{position:relative;display:grid;place-items:center;min-height:340px}
-.moon{position:absolute;top:-6px;right:6%;width:84px;height:84px;filter:drop-shadow(0 0 24px rgba(255,227,163,.55));animation:floaty 7s ease-in-out infinite}
-.lantern{position:absolute;left:2%;top:-30px;width:70px;transform-origin:top center;animation:swing 5s ease-in-out infinite}
-.lantern .glow{animation:flick 2.4s ease-in-out infinite}
-@keyframes swing{0%,100%{transform:rotate(5deg)}50%{transform:rotate(-5deg)}}
-@keyframes flick{0%,100%{opacity:.85}50%{opacity:1}}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.orb{position:relative;width:clamp(200px,32vw,300px);aspect-ratio:1;transition:filter 1s}
-.orb .b{position:absolute;inset:0;mix-blend-mode:screen;filter:blur(2px);transition:background 1.2s}
+.hero p.lead{color:var(--muted);font-size:1.02rem;max-width:520px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.pill{font-size:.78rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.04)}
+.hero-art{position:relative;display:grid;place-items:center;min-height:280px}
+.moon{position:absolute;top:-6px;right:6%;width:74px;height:74px;filter:drop-shadow(0 0 24px rgba(255,227,163,.55));animation:floaty 7s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.orb{position:relative;width:clamp(180px,28vw,260px);aspect-ratio:1}
+.orb .b{position:absolute;inset:0;mix-blend-mode:screen;filter:blur(2px)}
 .orb .b1{background:radial-gradient(circle at 30% 30%,var(--c1),transparent 62%);animation:morph 9s ease-in-out infinite;border-radius:42% 58% 63% 37%/45% 40% 60% 55%}
 .orb .b2{background:radial-gradient(circle at 70% 65%,var(--c2),transparent 62%);animation:morph 11s ease-in-out infinite reverse;border-radius:58% 42% 37% 63%/55% 60% 40% 45%}
-.orb .b3{background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.55),transparent 45%);animation:morph 7s ease-in-out infinite;border-radius:50%;inset:18%}
-.orb::after{content:"";position:absolute;inset:-18%;border-radius:50%;background:radial-gradient(circle,var(--c1) 0%,transparent 65%);opacity:.28;filter:blur(30px);z-index:-1}
-@keyframes morph{0%,100%{transform:rotate(0) scale(1);border-radius:42% 58% 63% 37%/45% 40% 60% 55%}33%{transform:rotate(120deg) scale(1.06);border-radius:60% 40% 45% 55%/50% 60% 40% 50%}66%{transform:rotate(240deg) scale(.96);border-radius:38% 62% 55% 45%/60% 40% 60% 40%}}
-.orb-word{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3.5vw,2.2rem);text-shadow:0 2px 20px rgba(0,0,0,.4);text-align:center}
-.orb-word span{border-right:2px solid var(--gold);padding-right:6px}
-@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1;min-height:260px}.moon{right:2%}}
+@keyframes morph{0%,100%{transform:rotate(0) scale(1)}33%{transform:rotate(120deg) scale(1.05)}66%{transform:rotate(240deg) scale(.95)}}
+.orb-word{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:1.6rem;text-shadow:0 2px 20px rgba(0,0,0,.4)}
 
-/* SECTIONS */
-section{padding:clamp(40px,7vw,80px) 0}
-.sec-head{max-width:640px;margin-bottom:30px}
-.sec-head h2{font-family:var(--serif);font-size:clamp(1.9rem,4.2vw,2.8rem);line-height:1.12;margin:10px 0 10px;letter-spacing:-.01em}
-.sec-head p{color:var(--muted)}
-.glass{background:var(--card);border:1px solid var(--line);border-radius:26px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.08)}
+/* SECTION CHAT INTERAKTIF */
+section{padding:clamp(30px,5vw,60px) 0}
+.sec-head{max-width:640px;margin-bottom:20px}
+.sec-head h2{font-family:var(--serif);font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.15;margin:8px 0}
+.sec-head p{color:var(--muted);font-size:.95rem}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:24px;backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 
-/* CHAT ROOM INTERAKTIF */
-.chat-box{padding:20px;display:flex;flex-direction:column;height:600px;max-width:800px;margin:0 auto}
-.chat-messages{flex-grow:1;overflow-y:auto;padding-right:10px;display:flex;flex-direction:column;gap:16px;margin-bottom:16px}
-.chat-messages::-webkit-scrollbar{width:6px}
+/* CHAT BOX */
+.chat-container{padding:20px;display:flex;flex-direction:column;height:680px;max-width:850px;margin:0 auto}
+.chips-bar{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;margin-bottom:12px;scrollbar-width:none}
+.chips-bar::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:.82rem;color:var(--muted);cursor:pointer;transition:all .2s}
+.chip:hover{background:rgba(255,255,255,.1)}
+.chip.active{background:linear-gradient(135deg,rgba(246,198,103,.3),rgba(246,198,103,.1));border-color:var(--gold);color:var(--gold2);font-weight:600}
+
+.chat-messages{flex-grow:1;overflow-y:auto;padding-right:8px;display:flex;flex-direction:column;gap:18px;margin-bottom:14px}
+.chat-messages::-webkit-scrollbar{width:5px}
 .chat-messages::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:10px}
-.msg{max-width:85%;padding:14px 18px;border-radius:20px;line-height:1.6;font-size:.95rem;animation:fadeIn .3s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.msg.user{background:linear-gradient(135deg,#ffd877,#f0a93c);color:#2a1a00;align-self:flex-end;border-bottom-right-radius:4px;font-weight:500}
-.msg.ai{background:rgba(255,255,255,.08);border:1px solid var(--line);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
-.msg.ai .ar{font-family:var(--ar);direction:rtl;text-align:center;font-size:1.35rem;color:#fff8e6;margin:8px 0 6px}
-.msg.ai .tr{font-size:.9rem;color:#e7ebff;margin-bottom:6px}
-.msg.ai .ref{color:var(--gold);font-weight:600;font-size:.8rem}
-.chat-input-row{display:flex;gap:10px;background:rgba(5,8,26,.6);border:1px solid var(--line);border-radius:999px;padding:6px 8px 6px 18px}
+  .msg{max-width:92%;padding:16px 20px;border-radius:20px;line-height:1.7;font-size:.96rem;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg.user{background:linear-gradient(135deg,#ffd877,#f0a93c);color:#2a1a00;align-self:flex-end;border-bottom-right-radius:4px;font-weight:600}
+.msg.ai{background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.ai .box-isi{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.msg.ai .ar{font-family:var(--ar);direction:rtl;text-align:center;font-size:1.35rem;color:#fff8e6;margin:8px 0}
+.msg.ai .tr{font-size:.9rem;color:#e7ebff;text-align:center;margin-bottom:4px;font-style:italic}
+.msg.ai .ref{color:var(--gold);font-weight:600;font-size:.82rem;text-align:center;margin-bottom:10px}
+.msg.ai .hadis-box{background:rgba(0,0,0,.2);padding:10px 14px;border-radius:12px;margin:8px 0;font-size:.88rem;color:#dbeafe}
+.msg.ai .action-list{background:rgba(246,198,103,.08);border:1px solid rgba(246,198,103,.2);padding:12px 14px;border-radius:14px;margin-top:10px}
+.msg.ai .action-list h4{color:var(--gold2);font-size:.9rem;margin-bottom:6px;font-family:var(--serif)}
+.msg.ai .action-list ul{padding-left:18px;font-size:.9rem;color:#eef2ff;display:grid;gap:4px}
+.msg.ai .action-list li{margin-bottom:3px}
+.msg.ai .action-row{display:flex;justify-content:flex-end;gap:8px;margin-top:12px;border-top:1px solid rgba(255,255,255,.05);padding-top:8px}
+
+.chat-input-area{display:flex;flex-direction:column;gap:8px;background:rgba(5,8,26,.7);border:1px solid var(--line);border-radius:20px;padding:10px 14px}
+.selected-chip-badge{font-size:.78rem;color:var(--gold2);display:none;align-items:center;gap:6px}
+.selected-chip-badge span{background:rgba(246,198,103,.15);padding:2px 8px;border-radius:9px}
+.chat-input-row{display:flex;gap:10px;align-items:center}
 .chat-input-row input{flex-grow:1;background:none;border:0;color:var(--ink);font:inherit;outline:none}
 .chat-input-row input::placeholder{color:#6f79a8}
- /* NAPAS */
+
+/* NAPAS & TASBIH */
 .napas{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.panel{padding:clamp(20px,3vw,32px);text-align:center}
-.panel h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:6px}
-.panel p.s{color:var(--muted);font-size:.9rem;margin-bottom:18px}
-.breath{width:190px;height:190px;margin:10px auto 20px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.35),rgba(139,155,255,.35) 45%,rgba(110,231,249,.2));box-shadow:0 0 60px rgba(139,155,255,.35),inset 0 0 40px rgba(255,255,255,.15);transform:scale(.62);transition:transform 4s ease-in-out}
-.breath span{font-family:var(--ar);font-size:1.6rem}
-.phase{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold2);min-height:2rem;margin-bottom:12px}
-.tasbih{width:170px;height:170px;border-radius:50%;margin:6px auto 14px;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#ffe3a3,#f0a93c 60%,#b36d10);color:#2a1a00;box-shadow:0 18px 40px -12px rgba(240,169,60,.7);transition:transform .1s;user-select:none;-webkit-tap-highlight-color:transparent}
-.tasbih:active{transform:scale(.94)}
-.tasbih b{font-size:3rem;font-family:var(--serif);line-height:1}
-.dz{font-family:var(--ar);font-size:1.8rem;color:var(--gold2);min-height:3rem}
+.panel{padding:24px;text-align:center}
+.panel h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:6px}
+.panel p.s{color:var(--muted);font-size:.88rem;margin-bottom:16px}
+.breath{width:160px;height:160px;margin:10px auto 16px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.35),rgba(139,155,255,.35) 45%,rgba(110,231,249,.2));box-shadow:0 0 40px rgba(139,155,255,.3);transform:scale(.62);transition:transform 4s ease-in-out}
+.breath span{font-family:var(--ar);font-size:1.4rem}
+.phase{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold2);min-height:1.8rem;margin-bottom:10px}
+.tasbih{width:150px;height:150px;border-radius:50%;margin:6px auto 12px;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#ffe3a3,#f0a93c 60%,#b36d10);color:#2a1a00;box-shadow:0 14px 30px -10px rgba(240,169,60,.7);user-select:none}
+.tasbih b{font-size:2.6rem;font-family:var(--serif);line-height:1}
+.dz{font-family:var(--ar);font-size:1.6rem;color:var(--gold2);min-height:2.6rem}
 @media(max-width:760px){.napas{grid-template-columns:1fr}}
 
-/* TENTANG */
-.about{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
-.about .glass{padding:clamp(20px,3vw,32px)}
-.about h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:10px}
-.about p,.about li{color:#cdd5f7;font-size:.96rem}
-.about ul{margin:8px 0 0 18px;display:grid;gap:6px}
-@media(max-width:820px){.about{grid-template-columns:1fr}}
-footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:.86rem;border-top:1px solid rgba(255,255,255,.07)}
-footer .logo{justify-content:center;margin-bottom:10px;color:var(--ink)}
+footer{padding:30px 0 50px;text-align:center;color:var(--muted);font-size:.84rem;border-top:1px solid rgba(255,255,255,.07)}
 footer strong{color:var(--gold2)}
 </style>
 </head>
 <body>
 <canvas id="sky" aria-hidden="true"></canvas>
-
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="FeelMe beranda">
+    <a class="logo" href="#top">
       <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe3a3"/><stop offset="1" stop-color="#f0a93c"/></linearGradient></defs><path d="M32 56C14 43 6 33 6 22a13 13 0 0 1 24-7l2 3 2-3a13 13 0 0 1 24 7c0 11-8 21-26 34z" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linejoin="round"/><path d="M36 22a9 9 0 1 0 0 18a7 7 0 1 1 0-18z" fill="url(#lg)"/></svg>
       FeelMe
     </a>
     <ul>
-      <li><a href="#curhat">Chat Interaktif</a></li>
-      <li><a href="#napas">Tenangkan diri</a></li>
-      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#curhat">Ruang Chat</a></li>
+      <li><a href="#napas">Tenangkan Diri</a></li>
     </ul>
-    <a class="btn btn-gold" href="#curhat" style="padding:9px 18px;font-size:.9rem">Mulai ngobrol</a>
+    <a class="btn btn-gold" href="#curhat" style="padding:8px 16px;font-size:.85rem">Mulai Curhat</a>
   </div>
 </header>
-  <main id="top">
+
+<main id="top">
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow">Curhat Islami • Terus Menerus</span>
+        <span class="eyebrow">Teman Curhat Islami • Action Plan Nyata</span>
         <h1>Ceritakan saja. <em>Hatimu</em> didengarkan.</h1>
-        <p class="lead">Ketik keluh kesahmu, balas-balasan chat secara real-time. FeelMe mendengarkan dan merespons otomatis dengan ayat Al-Qur'an, hadis, serta pelukan kata yang menenangkan.</p>
-        <div class="cta-row">
-          <a class="btn btn-gold" href="#curhat">💬 Mulai Chat Interaktif</a>
-          <a class="btn btn-ghost" href="#napas">🌬️ Tenangkan napas</a>
-        </div>
-        <div class="pills"><span class="pill">🔒 Privasi aman di perangkatmu</span><span class="pill">📖 Al-Qur'an &amp; Hadis</span><span class="pill">✨ Chat Terus-Menerus</span></div>
+        <p class="lead">Pilih masalahmu, dapet solusi panjang ala bestie yang suportif, lengkap dengan panduan ayat Al-Qur'an dan **langkah aksi nyata** yang harus kamu lakukan hari ini.</p>
+        <div class="pills"><span class="pill">✨ Solusi &amp; Action Plan</span><span class="pill">📖 Ayat &amp; Hadis Spesifik</span><span class="pill">📋 Salin Jawaban</span></div>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <svg class="moon" viewBox="0 0 100 100"><defs><radialGradient id="mg" cx=".35" cy=".35"><stop offset="0" stop-color="#fff6d8"/><stop offset="1" stop-color="#f6c667"/></radialGradient></defs><path d="M62 10a42 42 0 1 0 28 62A34 34 0 0 1 62 10z" fill="url(#mg)"/></svg>
-        <svg class="lantern" viewBox="0 0 70 130"><line x1="35" y1="0" x2="35" y2="26" stroke="#f6c667" stroke-width="2"/><path d="M22 26h26l-4 10H26z" fill="#f0a93c"/><path d="M26 36h18l8 14v38l-8 12H26l-8-12V50z" fill="rgba(246,198,103,.25)" stroke="#f6c667" stroke-width="2.4" stroke-linejoin="round"/><ellipse class="glow" cx="35" cy="68" rx="8" ry="14" fill="#ffe3a3"/><path d="M26 100h18l-3 10H29z" fill="#f0a93c"/><path d="M35 110v14" stroke="#f6c667" stroke-width="2"/><circle cx="35" cy="126" r="3" fill="#f6c667"/></svg>
-        <div class="orb" id="heroOrb"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div><div class="orb-word"><span id="typed"></span></div></div>
+        <svg class="moon" viewBox="0 0 100 100"><defs><radialGradient id="mg" cx=".35" cy=".35"><stop offset="0" stop-color="#fff6d8"/><stop offset="1" stop-color="#f6c667"/></radialGradient></defs><path d="M62 10a42 42 0 1 0 28 62A34 34 0 0 1 62 10z" fill="url<img>"/></svg>
+        <div class="orb"><div class="b b1"></div><div class="b b2"></div><div class="orb-word">FeelMe</div></div>
       </div>
     </div>
   </section>
-
-  <!-- CHAT INTERAKTIF TERUS-MENERUS -->
+  <!-- CHAT INTERAKTIF -->
   <section id="curhat">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Ruang Obrolan Interaktif</span>
-        <h2>Teman Cerita & Penenang Hati</h2>
-        <p>Ketik apa pun yang kamu rasakan. Kamu bisa terus membalas dan mengobrol panjang lebar layaknya asisten AI pribadi.</p>
+      <div class="sec-head">
+        <span class="eyebrow">Ruang Obrolan</span>
+        <h2>Lagi ngadepin masalah apa hari ini, bestie?</h2>
+        <p>Pilih kategori di bawah atau langsung ketik ceritamu biar langsung dapet solusi dan action plan-nya!</p>
       </div>
-      <div class="glass chat-box reveal">
+      <div class="glass chat-container">
+        <!-- Chips Kategori -->
+        <div class="chips-bar" id="chipsBar">
+          <button type="button" class="chip active" data-cat="umum">✨ Curhat Bebas</button>
+          <button type="button" class="chip" data-cat="sedih">🌧️ Sedih / Galau</button>
+          <button type="button" class="chip" data-cat="cemas">🌀 Overthinking / Cemas</button>
+          <button type="button" class="chip" data-cat="lelah">🪫 Capek / Tugas / Kuliah</button>
+          <button type="button" class="chip" data-cat="keluarga">🏠 Masalah Keluarga</button>
+          <button type="button" class="chip" data-cat="rezeki">🪙 Keuangan / Uang</button>
+          <button type="button" class="chip" data-cat="cinta">💔 Patah Hati</button>
+          <button type="button" class="chip" data-cat="marah">🔥 Emosi / Kesal</button>
+        </div>
+
         <div class="chat-messages" id="chatMessages">
           <div class="msg ai">
-            <b>✨ FeelMe:</b><br>Assalamu'alaikum 🤍 Aku di sini mendengarkan ceritamu. Lagi ngerasa apa hari ini? Ceritakan apa saja yang mengganjal di hatimu...
+            <b>✨ FeelMe:</b><br>
+            Hai bestie! 🤍 Mau cerita apa hari ini? Pilih topik di atas atau langsung ketik masalahmu, nanti aku buatin panduan ayat beserta *action plan* langkah-langkah praktis yang bisa kamu lakuin sekarang juga!
           </div>
         </div>
-        <form class="chat-input-row" id="chatForm">
-          <input type="text" id="chatInput" placeholder="Ketik keluh kesah atau balasanmu di sini..." autocomplete="off">
-          <button type="submit" class="btn btn-gold" style="padding:10px 20px;border-radius:999px">Kirim ✨</button>
+
+        <form class="chat-input-area" id="chatForm">
+          <div class="selected-chip-badge" id="chipBadge">Kategori: <span id="activeChipName">Curhat Bebas</span></div>
+          <div class="chat-input-row">
+            <input type="text" id="chatInput" placeholder="Ketik keluh kesah atau masalahmu di sini..." autocomplete="off">
+            <button type="submit" class="btn btn-gold" style="padding:10px 18px;border-radius:16px;font-size:.9rem">Kirim ✨</button>
+          </div>
         </form>
       </div>
     </div>
   </section>
-
-  <!-- NAPAS -->
+  <!-- NAPAS & TASBIH -->
   <section id="napas">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Tenangkan diri</span>
-        <h2>Napas pelan, hati ikut pelan.</h2>
-        <p>Ikuti lingkaran sambil berdzikir dalam hati saat dada terasa sesak.</p>
+      <div class="sec-head">
+        <span class="eyebrow">Tenangkan Diri</span>
+        <h2>Atur napas sebentar yuk.</h2>
       </div>
       <div class="napas">
-        <div class="glass panel reveal">
-          <h3>Napas berdzikir</h3>
-          <p class="s">Tarik 4 detik • tahan 4 detik • hembus 6 detik</p>
+        <div class="glass panel">
+          <h3>Napas Berekspresi</h3>
+          <p class="s">Tarik 4 detik • Tahan 4 detik • Hembus 6 detik</p>
           <div class="breath" id="breath"><span id="bword">بِسْمِ اللَّهِ</span></div>
           <div class="phase" id="phase">Siap?</div>
-          <button class="btn btn-gold" id="bbtn">Mulai</button>
-          <p class="s" style="margin:14px 0 0" id="bcycle"></p>
+          <button class="btn btn-gold" id="bbtn" style="padding:8px 18px;font-size:.85rem">Mulai Napas</button>
+          <p class="s" style="margin:10px 0 0" id="bcycle"></p>
         </div>
-        <div class="glass panel reveal">
-          <h3>Tasbih digital</h3>
-          <p class="s">Ketuk lingkaran. Tiap 33 hitungan, dzikir berganti otomatis.</p>
+        <div class="glass panel">
+          <h3>Tasbih Digital</h3>
+          <p class="s">Ketuk lingkaran untuk berdzikir santai</p>
           <div class="dz" id="dz">سُبْحَانَ اللَّهِ</div>
-          <button class="tasbih" id="tas" aria-label="Hitung dzikir"><b id="tcount">0</b></button>
-          <p class="s" id="tlabel" style="margin-bottom:12px">Subhanallah • putaran 1 dari 3</p>
-          <button class="btn btn-ghost" id="treset">Ulangi dari awal</button>
-        </div>
-      </div>
-    </div>
-  </section>
-    <!-- TENTANG -->
-  <section id="tentang">
-    <div class="wrap">
-      <div class="sec-head reveal"><span class="eyebrow">Tentang FeelMe</span><h2>Dibuat supaya tidak ada yang merasa sendirian.</h2></div>
-      <div class="about">
-        <div class="glass reveal">
-          <h3>Latar belakang &amp; tujuan</h3>
-          <p>FeelMe adalah ruang curhat interaktif berbasis bimbingan Al-Qur'an dan Sunnah yang siap menemani kapan pun kamu butuh pendengar setia.</p>
-        </div>
-        <div class="glass reveal">
-          <h3>Identitas pembuat</h3>
-          <p><strong>NAMA_KAMU</strong><br>Pendidikan Agama Islam</p>
+          <button class="tasbih" id="tas"><b id="tcount">0</b></button>
+          <p class="s" id="tlabel" style="margin-bottom:10px">Subhanallah • 33x</p>
+          <button class="btn btn-ghost" id="treset">Reset Ulang</button>
         </div>
       </div>
     </div>
@@ -228,107 +219,195 @@ footer strong{color:var(--gold2)}
 <footer>
   <div class="wrap">
     <div class="logo"><span>FeelMe</span></div>
-    <p>Dibuat dengan 🤍 oleh <strong>NAMA_KAMU</strong> • Teman Curhat Islami</p>
+    <p>Dibuat dengan 🤍 oleh <strong>Mila</strong> • Teman Curhat Islami Paling Nyambung</p>
   </div>
 </footer>
 
-<!-- ===================== MESIN ANALISIS & CHAT INTERAKTIF ===================== -->
+<!-- ===================== SCRIPT DATA SPESIFIK & ACTION PLAN ===================== -->
 <script>
-const V={
- insyirah:{ar:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",id:"Sesungguhnya bersama kesulitan ada kemudahan.",ref:"QS. Al-Insyirah: 5"},
- baqarah286:{ar:"لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",id:"Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya.",ref:"QS. Al-Baqarah: 286"},
- raad28:{ar:"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",id:"Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram.",ref:"QS. Ar-Ra'd: 28"},
- taubah40:{ar:"لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",id:"Jangan bersedih, sesungguhnya Allah bersama kita.",ref:"QS. At-Taubah: 40"},
- duha3:{ar:"مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",id:"Tuhanmu tidak meninggalkanmu dan tidak pula membencimu.",ref:"QS. Ad-Duha: 3"},
- zumar53:{ar:"قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",id:"Wahai hamba-hamba-Ku yang melampaui batas, janganlah berputus asa dari rahmat Allah.",ref:"QS. Az-Zumar: 53"},
- talaq:{ar:"وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",id:"Siapa yang bertakwa kepada Allah, Dia akan memberinya jalan keluar.",ref:"QS. At-Talaq: 2"},
- syuara80:{ar:"وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ",id:"Dan apabila aku sakit, Dialah yang menyembuhkanku.",ref:"QS. Asy-Syu'ara: 80"},
- isra23:{ar:"وَبِالْوَالِدَيْنِ إِحْسَانًا",id:"Dan hendaklah berbuat baik kepada kedua orang tua.",ref:"QS. Al-Isra: 23"},
- ibrahim7:{ar:"لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",id:"Jika kamu bersyukur, niscaya Aku akan menambah nikmat kepadamu.",ref:"QS. Ibrahim: 7"}
-};
-  const H={
- musibah:{t:"Tidaklah seorang muslim ditimpa kelelahan atau kesedihan, kecuali Allah menghapus kesalahan-kesalahannya.",r:"HR. Bukhari & Muslim"},
- ajaib:{t:"Urusan orang beriman itu semuanya baik baginya.",r:"HR. Muslim"},
- marah:{t:"Orang kuat itu bukan yang menang saat bergulat, tetapi yang mampu menguasai dirinya ketika marah.",r:"HR. Bukhari & Muslim"},
- obat:{t:"Allah tidak menurunkan penyakit kecuali Dia juga menurunkan obatnya.",r:"HR. Bukhari"}
-};
-
-const C={
- sedih:{kw:["sedih","nangis","galau","kecewa","hancur","terluka","sakithati","nyesek","sesak","patah semangat"],
-  text:"Pelan-pelan dulu ya. Sedih bukan tanda imanmu kurang. Allah Maha Dekat dengan hatimu yang sedang rapuh.",v:V.taubah40,h:H.musibah},
- cemas:{kw:["cemas","takut","khawatir","overthink","panik","gelisah","resah","stres","tegang"],
-  text:"Tarik napas dulu. Banyak hal yang kamu takutkan belum tentu terjadi, serahkan sisanya kepada Allah.",v:V.raad28,h:H.ajaib},
- marah:{kw:["marah","kesal","emosi","benci","jengkel","sebel","murka"],
-  text:"Rasa kesal itu valid. Redakan dulu amarahmu, ucapkan ta'awudz agar hatimu kembali dingin.",v:V.raad28,h:H.marah},
- lelah:{kw:["capek","cape","lelah","burnout","penat","letih","tugas","skripsi","kuliah","kerja","lembur"],
-  text:"Kamu sudah berjuang keras hari ini. Istirahat sebentar ya, tubuh dan pikiranmu punya hak untuk tenang.",v:V.baqarah286,h:H.musibah},
- keluarga:{kw:["ortu","orang tua","ibu","ayah","mama","papa","keluarga","rumah","berantem"],
-  text:"Hubungan dengan keluarga memang penuh dinamika. Rendahkan hati dan doakan mereka dalam sujudmu.",v:V.isra23,h:H.musibah},
- rezeki:{kw:["uang","duit","hutang","utang","ekonomi","biaya","kuliah","spp","kos","pas-pasan"],
-  text:"Urusan rezeki sudah diatur dengan adil oleh Allah. Tetap ikhtiar terbaik dan qana'ah.",v:V.talaq,h:H.ajaib},
- sakit:{kw:["sakit","demam","pusing","dokter","obat","lemas","badan"],
-  text:"Sakit adalah penggugur dosa. Tetap berobat ke dokter dan perbanyak istirahat.",v:V.syuara80,h:H.obat},
- syukur:{kw:["syukur","senang","alhamdulillah","bahagia","lega"],
-  text:"Alhamdulillah! Nikmat ini patut disyukuri agar Allah limpahkan kebaikan yang lebih banyak.",v:V.ibrahim7,h:H.ajaib},
- umum:{kw:[],
-  text:"Aku mendengarkan setiap kata dari cerita dan perasaanmu. Apapun yang kamu hadapi, sandarkan segalanya kepada Allah.",v:V.baqarah286,h:H.ajaib}
-};
-
-function getAIResponse(input){
-  const lower=input.toLowerCase();
-  for(let key in C){
-    if(key==='umum') continue;
-    for(let w of C[key].kw){
-      if(lower.includes(w)){
-        const matched=C[key];
-        return `<b>✨ FeelMe:</b><br>${matched.text}<br><div class="ar">${matched.v.ar}</div><div class="tr">"${matched.v.id}"</div><div class="ref">${matched.v.ref}</div><br><span style="font-size:0.88rem;color:var(--muted)">Ada hal lain lagi yang ingin kamu ceritakan? Aku mendengarkan. 🤍</span>`;
-      }
-    }
+const dataDatabase = {
+  sedih: {
+    text: "Valid banget kalau kamu ngerasa sedih dan hancur sekarang, bestie. Nggak usah memaksakan diri buat pura-pura kuat. Peluk jauh secara virtual buat kamu! 🫂 Tangisanmu nggak pernah sia-sia di mata Allah.",
+    v: { ar: "لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا", id: "Jangan bersedih, sesungguhnya Allah bersama kita.", ref: "QS. At-Taubah: 40" },
+    h: { t: "Tidaklah seorang muslim ditimpa kesedihan, hingga duri yang menusuknya, melainkan Allah akan menghapuskan dosa-dosanya.", r: "HR. Bukhari & Muslim" },
+    actions: [
+      "Ambil air wudu sekarang juga, basuh muka dan tanganmu perlahan.",
+      "Gelar sajadah, shalat sunnah dua rakaat, lalu tumpahkan semua tangismu saat sujud.",
+      "Tulis 1 hal paling menyakitkan di kertas, lalu buang sebagai simbol kamu melepaskan bebannya.",
+      "Minum segelas air hangat dan istirahat dari medsos selama 2 jam."
+    ]
+  },
+  cemas: {
+    text: "Overthinking tengah malam emang paling juara bikin mental ke-drain ya? Otak mutar terus mikirin skenario terburuk. Tarik napas pelan-pelan, biarkan Allah yang urus masa depan, kamu fokus hari ini aja.",
+    v: { ar: "أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ", id: "Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram.", ref: "QS. Ar-Ra'd: 28" },
+    h: { t: "Urusan orang beriman itu semuanya baik. Jika mendapat kesenangan ia bersyukur, dan jika ditimpa kesusahan ia bersabar.", r: "HR. Muslim" },
+    actions: [
+      "Praktikkan teknik napas 4-4-6 di menu 'Tenangkan Diri' di bawah.",
+      "Tulis semua ketakutanmu di buku, lalu beri garis bawahi mana yang bisa kamu kontrol dan mana yang di luar kendalimu.",
+      "Ucapkan doa: 'Hasbiyallahu la ilaha illa huwa' berulang-ulang sampai dadanya longgar.",
+      "Matikan lampu kamar dan pasang murottal dengan suara pelan."
+    ]
+  },
+  lelah: {
+    text: "Sumpah, wajar banget kalau kamu burnout parah! Beban tugas, kuliah, atau kerjaan numpuk emang bikin kewarasan diuji. Kamu itu manusia, bukan robot yang harus nyala 24/7 tanpa henti.",
+    v: { ar: "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا", id: "Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya.", ref: "QS. Al-Baqarah: 286" },
+    h: { t: "Sesungguhnya tubuhmu punya hak atas dirimu...", r: "HR. Bukhari" },
+    actions: [
+      "Tutup semua laptop/buku sekarang juga. Set alarm untuk berhenti beraktivitas hari ini.",
+      "Buat list prioritas besok pagi, jadi malam ini otakmu nggak mikirin kerjaan numpuk.",
+      "Mandi air hangat agar otot-otot yang tegang kembali rileks.",
+      "Tidur lebih awal minimal 7-8 jam malam ini."
+    ]
+  },
+  keluarga: {
+    text: "Urusan rumah tangga atau beda pendapat sama orang tua emang paling juara bikin dada sesak. Walau lagi kesel, ingat bahwa ridha Allah tergantung pada ridha orang tua, tapi batasan mentalku juga penting dijaga.",
+    v: { ar: "وَبِالْوَالِدَيْنِ إِحْسَانًا", id: "Dan hendaklah berbuat baik kepada kedua orang tua.", ref: "QS. Al-Isra: 23" },
+    h: { t: "Ridha Allah ada pada ridha orang tua, dan murka Allah ada pada murka orang tua.", r: "HR. Tirmidzi" },
+    actions: [
+      "Tahan diri untuk tidak membalas dengan nada tinggi saat sedang emosi.",
+      "Menyingkir sejenak ke kamar atau luar rumah untuk mendinginkan kepala.",
+      "Doakan orang tuamu secara khusus di akhir shalat fardhu agar dilembutkan hatinya.",
+      "Cari waktu tenang (misal besok pagi) untuk ngobrol baik-baik atau minta maaf duluan."
+    ]
+  },
+  rezeki: {
+    text: "Masalah keuangan, dompet tipis, atau biaya hidup emang bikin kepala cenat-cenut. Tapi hei, rezekiku dan rezekimu udah dijamin sama Allah, nggak bakal tertukar!",
+    v: { ar: "وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ", id: "Barangsiapa bertakwa kepada Allah, niscaya Dia membukakan jalan keluar dan memberinya rezeki dari arah yang tidak disangka-sangka.", ref: "QS. At-Talaq: 2-3" },
+    h: { t: "Seandainya kalian bertawakal kepada Allah dengan sebenar-benarnya, Dia akan memberi rezeki seperti burung yang pergi lapar dan pulang kenyang.", r: "HR. Tirmidzi" },
+    actions: [
+      "Audit pengeluaranmu minggu ini, pangkas hal yang kurang penting.",
+      "Tunaikan sedekah subuh, meski nominalnya kecil, karena itu magnet rezeki.",
+      "Perbanyak baca 'Astaghfirullah' (membuka pintu rezeki dari tempat tak terduga).",
+      "Susun rencana ikhtiar baru besok pagi dengan kepala dingin."
+    ]
+  },
+  cinta: {
+    text: "Patah hati atau drama percintaan emang bikin nyesek semalaman. Tapi kalau pada akhirnya harus lepas, itu cara Allah nylametin kamu dari orang yang salah.",
+    v: { ar: "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً", id: "Dan di antara tanda kekuasaan-Nya ialah Dia menciptakan pasangan untukmu agar kamu merasa tenteram, dan dijadikan-Nya rasa kasih sayang.", ref: "QS. Ar-Rum: 21" },
+    h: { t: "Sungguh menakjubkan urusan seorang mukmin...", r: "HR. Muslim" },
+    actions: [
+      "Hapus atau simpan foto/chat lama yang bikin kamu teringat dan sakit hati lagi.",
+      "Mute/unfollow media sosial dia supaya kamu fokus ke diri sendiri (no stalking!).",
+      "Curhat ke sahabat terdekat yang suportif, jangan dipendam sendiri.",
+      "Alihkan energi patah hatimu untuk belajar skill baru atau olahraga."
+    ]
+  },
+  marah: {
+    text: "Lagi emosi banget sampai pengen meledak? Wajar kok, kita manusia. Tapi ingat pesen Nabi, orang hebat itu bukan yang jago berantem, tapi yang bisa ngerem amarahnya.",
+    v: { ar: "وَالْكَاظِمِينَ الْغَيْظَ وَالْعَافِينَ عَنِ النَّاسِ", id: "Dan orang-orang yang menahan amarahnya dan memaafkan kesalahan orang lain...", ref: "QS. Ali 'Imran: 134" },
+    h: { t: "Jangan marah, baginya surga. (Nabi mengulanginya beberapa kali).", r: "HR. Bukhari" },
+    actions: [
+      "Ucapkan Ta'awudz (A'udzubillahi minasy syaithanir rajim) sekarang juga.",
+      "Ubah posisi tubuhmu: kalau berdiri, duduklah; kalau duduk, berbaringlah.",
+      "Minum segelas air dingin dan jangan mengetik atau membalas chat apa pun selama 1 jam ke depan.",
+      "Ambil wudu untuk memadamkan api amarah."
+    ]
+  },
+  umum: {
+    text: "Aku dengerin setiap kata dari cerita kamu, bestie. Kadang ada hari di mana semuanya terasa berat tanpa alasan jelas. Tenang, Allah selalu ada buat dengerin aduanmu.",
+    v: { ar: "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا", id: "Karena sesungguhnya bersama kesulitan itu ada kemudahan.", ref: "QS. Al-Insyirah: 5-6" },
+    h: { t: "Urusan orang beriman itu semuanya baik...", r: "HR. Muslim" },
+    actions: [
+      "Ambil napas dalam-dalam, lalu hembuskan perlahan sebanyak 3 kali.",
+      "Lakukan shalat sunnah mutlak dua rakaat untuk menenangkan jiwa.",
+      "Tuliskan 3 hal yang masih bisa kamu syukuri hari ini di HP atau buku.",
+      "Istirahat sejenak dari layar handphone."
+    ]
   }
-  // Default umum jika tidak ada keyword cocok
-  return `<b>✨ FeelMe:</b><br>${C.umum.text}<br><div class="ar">${C.umum.v.ar}</div><div class="tr">"${C.umum.v.id}"</div><div class="ref">${C.umum.v.ref}</div><br><span style="font-size:0.88rem;color:var(--muted)">Ceritakan lagi apa yang sedang mengganjal di hatimu ya... 🤍</span>`;
-}
-  // Logika Kirim Chat Terus-Menerus
-const chatForm=document.getElementById('chatForm');
-const chatInput=document.getElementById('chatInput');
-const chatMessages=document.getElementById('chatMessages');
+};
+  let activeCategory = 'umum';
+
+document.querySelectorAll('.chips-bar .chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.chips-bar .chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    activeCategory = btn.dataset.cat;
+    
+    const badge = document.getElementById('chipBadge');
+    const badgeName = document.getElementById('activeChipName');
+    if(activeCategory === 'umum'){
+      badge.style.display = 'none';
+    } else {
+      badge.style.display = 'flex';
+      badgeName.textContent = btn.textContent;
+    }
+  });
+});
+
+const chatForm = document.getElementById('chatForm');
+const chatInput = document.getElementById('chatInput');
+const chatMessages = document.getElementById('chatMessages');
 
 chatForm.addEventListener('submit', function(e){
   e.preventDefault();
-  const text=chatInput.value.trim();
+  const text = chatInput.value.trim();
   if(!text) return;
 
-  // 1. Tampilkan pesan User
-  const userMsg=document.createElement('div');
-  userMsg.className='msg user';
-  userMsg.textContent=text;
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = text;
   chatMessages.appendChild(userMsg);
-  chatInput.value='';
-  chatMessages.scrollTop=chatMessages.scrollHeight;
+  chatInput.value = '';
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 
-  // 2. Simulasi AI mengetik / merespons setelah 800ms
-  setTimeout(()=>{
-    const aiMsg=document.createElement('div');
-    aiMsg.className='msg ai';
-    aiMsg.innerHTML=getAIResponse(text);
+  let cat = activeCategory;
+  const lower = text.toLowerCase();
+  if(cat === 'umum'){
+    if(lower.includes('sedih')||lower.includes('nangis')||lower.includes('galau')) cat = 'sedih';
+    else if(lower.includes('cemas')||lower.includes('takut')||lower.includes('overthink')) cat = 'cemas';
+    else if(lower.includes('capek')||lower.includes('lelah')||lower.includes('tugas')||lower.includes('kuliah')) cat = 'lelah';
+    else if(lower.includes('ortu')||lower.includes('ibu')||lower.includes('ayah')||lower.includes('keluarga')) cat = 'keluarga';
+    else if(lower.includes('uang')||lower.includes('duit')||lower.includes('hutang')) cat = 'rezeki';
+    else if(lower.includes('pacar')||lower.includes('putus')||lower.includes('cinta')) cat = 'cinta';
+    else if(lower.includes('marah')||lower.includes('kesal')||lower.includes('emosi')) cat = 'marah';
+   }
+
+  const res = dataDatabase[cat] || dataDatabase.umum;
+  const actionsHTML = res.actions.map(act => `<li>✔ ${act}</li>`).join('');
+
+  setTimeout(() => {
+    const aiMsg = document.createElement('div');
+    aiMsg.className = 'msg ai';
+    
+    aiMsg.innerHTML = `
+      <b>✨ FeelMe:</b><br><br>
+      ${res.text}<br>
+      <div class="box-isi">
+        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:4px">📖 Petunjuk Al-Qur'an</div>
+        <div class="ar" lang="ar">${res.v.ar}</div>
+        <div class="tr">"${res.v.id}"</div>
+        <div class="ref">${res.v.ref}</div>
+        
+        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-top:10px;margin-bottom:4px">🕌 Tuntunan Hadis</div>
+        <div class="hadis-box">${res.h.t}<br><b>(${res.h.r})</b></div>
+
+        <div class="action-list">
+          <h4>🛠️ Action Plan (Apa yang Harus Kamu Lakuin Sekarang):</h4>
+          <ul>${actionsHTML}</ul>
+        </div>
+      </div>
+      <div class="action-row">
+        <button type="button" class="btn btn-ghost copy-btn">📋 Salin Jawaban</button>
+      </div>
+    `;
+
     chatMessages.appendChild(aiMsg);
-    chatMessages.scrollTop=chatMessages.scrollHeight;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    const copyBtn = aiMsg.querySelector('.copy-btn');
+    copyBtn.onclick = async function(){
+      const plainText = `FeelMe:\n\n${res.text}\n\nAyat: ${res.v.id} (${res.v.ref})\n\nAction Plan:\n${res.actions.join('\n')}`;
+      try{
+        await navigator.clipboard.writeText(plainText);
+        copyBtn.textContent = '✅ Berhasil Disalin!';
+        setTimeout(() => copyBtn.textContent = '📋 Salin Jawaban', 2000);
+      }catch(err){
+        copyBtn.textContent = 'Gagal menyalin';
+      }
+    };
   }, 800);
 });
-
-// Efek teks berganti di hero
-const words=[['sedih','sedih'],['cemas','cemas'],['lelah','lelah'],['keluarga','keluarga'],['rezeki','rezeki'],['tenang','umum']];
-const el=document.getElementById('typed');
-let i=0,j=0,del=false;
-function tick(){
-  if(!el) return;
-  const [w]=words[i];
-  if(!del){j++;el.textContent=w.slice(0,j);if(j===w.length){del=true;return setTimeout(tick,1500)}}
-  else{j--;el.textContent=w.slice(0,j);if(j===0){del=false;i=(i+1)%words.length}}
-  setTimeout(tick,del?55:110);
-}
-tick();
-  // Napas Berdzikir Script
+  // Fitur Napas Berdzikir
 const br=document.getElementById('breath'),ph=document.getElementById('phase'),bw=document.getElementById('bword'),btn=document.getElementById('bbtn'),cy=document.getElementById('bcycle');
 let run=false,timer=null,cycles=0;
 const seq=[['Tarik napas…',4,'بِسْمِ اللَّهِ',1],['Tahan…',4,'حَسْبُنَا اللَّهُ',1],['Hembuskan pelan…',6,'الْحَمْدُ لِلَّهِ',.62]];
@@ -337,16 +416,18 @@ function step(idx){
   br.style.transitionDuration=(idx===1?0.3:d)+'s';br.style.transform='scale('+sc+')';
   timer=setTimeout(()=>{if(idx===2){cycles++;cy.textContent='Siklus selesai: '+cycles;if(cycles>=5){stop(true);return}}step((idx+1)%3)},d*1000);
 }
-function stop(done){run=false;clearTimeout(timer);btn.textContent='Mulai';br.style.transitionDuration='1s';br.style.transform='scale(.62)';ph.textContent=done?'Alhamdulillah, semoga lebih tenang 🌙':'Siap?'}
+function stop(done){run=false;clearTimeout(timer);btn.textContent='Mulai Napas';br.style.transitionDuration='1s';br.style.transform='scale(.62)';ph.textContent=done?'Alhamdulillah, udah lebih tenang? 🌙':'Siap?'}
 if(btn){btn.onclick=()=>{if(run){stop(false)}else{run=true;cycles=0;cy.textContent='';btn.textContent='Berhenti';step(0)}};}
 
 // Tasbih Digital
 let n=0,r=0;const tc=document.getElementById('tcount'),dzEl=document.getElementById('dz'),lab=document.getElementById('tlabel'),tasBtn=document.getElementById('tas'),tRes=document.getElementById('treset');
 const dzList=[['سُبْحَانَ اللَّهِ','Subhanallah'],['الْحَمْدُ لِلَّهِ','Alhamdulillah'],['اللَّهُ أَكْبَرُ','Allahu Akbar']];
-function paint(){if(tc)tc.textContent=n;if(dzEl)dzEl.textContent=dzList[r][0];if(lab)lab.textContent=dzList[r][1]+' • putaran '+(r+1)+' dari 3'}
-if(tasBtn){tasBtn.onclick=()=>{n++;if(navigator.vibrate)navigator.vibrate(8);if(n>33){n=1;r++}if(r>2){r=0;n=0;if(lab)lab.textContent='Alhamdulillah, 99 selesai 🌙';if(tc)tc.textContent='✓';return}paint()};}
+function paint(){if(tc)tc.textContent=n;if(dzEl)dzEl.textContent=dzList[r][0];if(lab)lab.textContent=dzList[r][1]+' • '+(n%33==0&&n>0?'Putaran selesai':'33x')}
+if(tasBtn){tasBtn.onclick=()=>{n++;if(navigator.vibrate)navigator.vibrate(8);if(n>99)n=1;r=Math.floor(n/33);paint()};}
 if(tRes){tRes.onclick=()=>{n=0;r=0;paint()};}
 paint();
 </script>
 </body>
 </html>
+
+  
