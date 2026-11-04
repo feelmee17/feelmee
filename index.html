@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>FeelMe — Curhat Islami, Hatimu Didengar</title>
-<meta name="description" content="FeelMe: tempat curhat yang menjawab keluh kesahmu secara otomatis dengan ayat Al-Qur'an, hadis, doa, dan langkah kecil yang menenangkan.">
+<meta name="description" content="FeelMe: teman curhat interaktif yang merespons keluh kesahmu secara berkelanjutan dengan ayat Al-Qur'an, hadis, dan penenang hati.">
 <meta name="theme-color" content="#070b1f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,8 +39,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(246,198,103,.75)}
 .btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.05)}
 .btn-ghost:hover{background:rgba(255,255,255,.11);transform:translateY(-2px)}
-.btn[disabled]{opacity:.5;pointer-events:none}
 @media(max-width:720px){.nav ul{display:none}}
+  }
   /* HERO */
 .hero{padding:clamp(40px,8vw,90px) 0 40px}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
@@ -77,74 +77,22 @@ section{padding:clamp(40px,7vw,80px) 0}
 .sec-head p{color:var(--muted)}
 .glass{background:var(--card);border:1px solid var(--line);border-radius:26px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.08)}
 
-/* FORM */
-.form{padding:clamp(20px,4vw,38px)}
-.row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
-label.lbl{display:block;font-size:.82rem;color:var(--muted);margin-bottom:8px;font-weight:600;letter-spacing:.03em}
-.input,textarea{width:100%;background:rgba(5,8,26,.55);border:1px solid var(--line);border-radius:16px;color:var(--ink);padding:14px 16px;font:inherit;transition:border .2s,box-shadow .2s}
-.input:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(246,198,103,.15)}
-textarea{min-height:190px;resize:vertical;line-height:1.7}
-::placeholder{color:#6f79a8}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:20px}
-.chip{padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:.88rem;transition:all .2s;user-select:none}
-.chip:hover{transform:translateY(-2px);background:rgba(255,255,255,.1)}
-.chip[aria-pressed="true"]{background:linear-gradient(135deg,rgba(246,198,103,.28),rgba(246,198,103,.1));border-color:var(--gold);color:var(--gold2)}
-.form-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}
-.count{font-size:.8rem;color:var(--muted)}
-.privacy{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted);margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
-.hint{color:#ffb3b3;font-size:.86rem;min-height:1.3em;margin-top:8px}
-.shake{animation:shake .4s}
-@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
-
-/* LOADER */
-.loader{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(5,8,26,.9);backdrop-filter:blur(8px);text-align:center;padding:20px}
-.loader[hidden]{display:none}
-.loader .orb{width:170px;margin:0 auto 26px;animation:breathe 4s ease-in-out infinite}
-.loader p{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold2);min-height:2em}
-@keyframes breathe{0%,100%{transform:scale(.86)}50%{transform:scale(1.08)}}
-/* RESULT */
-#hasil{--c1:#8b9bff;--c2:#6ee7f9}
-.res-head{display:flex;align-items:center;gap:22px;margin-bottom:22px;flex-wrap:wrap}
-.res-head .orb{width:120px;flex:none}
-.res-head h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1}
-.also{color:var(--muted);font-size:.92rem;margin-top:4px}
-.greet{font-size:1.1rem;font-weight:600;margin-bottom:10px}
-.echo{border-left:3px solid var(--gold);padding:10px 16px;margin:12px 0 16px;color:var(--gold2);font-family:var(--serif);font-style:italic;font-size:1.12rem;background:linear-gradient(90deg,rgba(246,198,103,.1),transparent);border-radius:0 12px 12px 0;word-break:break-word}
-.hug{font-size:1.06rem;color:#dfe5ff;max-width:760px;margin-bottom:24px}
-.card{padding:clamp(18px,3vw,28px);margin-bottom:18px;position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2));opacity:.9}
-.tag{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.09);color:var(--gold2);margin-bottom:14px}
-.ar{font-family:var(--ar);direction:rtl;text-align:center;font-size:clamp(1.55rem,3.6vw,2.15rem);line-height:2.1;color:#fff8e6;margin:4px 0 10px}
-.tr{font-size:1.02rem;color:#e7ebff;text-align:center;max-width:680px;margin:0 auto}
-.ref{text-align:center;color:var(--gold);font-weight:600;font-size:.88rem;margin-top:10px}
-.lat{text-align:center;color:var(--muted);font-style:italic;font-size:.92rem;margin-bottom:6px}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
-.hadis p{font-size:1.02rem;color:#e7ebff}
-.hadis .ref{text-align:left}
-ul.chk{list-style:none;display:grid;gap:10px;margin:6px 0 18px}
-ul.chk li label{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border-radius:16px;background:rgba(255,255,255,.045);border:1px solid transparent;cursor:pointer;transition:all .2s}
-ul.chk li label:hover{border-color:var(--line)}
-ul.chk input{appearance:none;flex:none;width:22px;height:22px;border-radius:8px;border:2px solid var(--muted);margin-top:2px;display:grid;place-items:center;transition:all .2s;cursor:pointer}
-ul.chk input:checked{background:var(--gold);border-color:var(--gold)}
-ul.chk input:checked::after{content:"✓";color:#2a1a00;font-size:.8rem;font-weight:800}
-ul.chk input:checked+span{text-decoration:line-through;opacity:.55}
-.bar{height:8px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--c1),var(--gold));border-radius:99px;transition:width .5s}
-.barmsg{font-size:.86rem;color:var(--muted);margin-top:8px;min-height:1.4em}
-.second p{color:#dfe5ff}
-.second .mini-ar{font-family:var(--ar);direction:rtl;font-size:1.5rem;line-height:2;color:#fff8e6;margin:8px 0}
-.affirm{text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,1.8rem);color:var(--gold2);margin:30px auto 8px;max-width:640px;line-height:1.35}
-.affirm small{display:block;font-family:var(--sans);font-style:normal;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:24px 0 12px}
-.disc{text-align:center;font-size:.82rem;color:var(--muted);max-width:640px;margin:10px auto 0}
-.crisis{border-color:rgba(255,140,140,.5);background:linear-gradient(160deg,rgba(255,120,120,.12),rgba(255,255,255,.05))}
-.crisis h2{font-family:var(--serif);font-size:1.9rem;margin-bottom:10px}
-.crisis ol{margin:14px 0 18px 20px;display:grid;gap:8px}
-.crisis a.tel{display:inline-block;padding:10px 18px;border-radius:999px;background:#ff8f8f;color:#3a0000;font-weight:700;text-decoration:none;margin:4px 6px 4px 0}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
-.reveal.in{opacity:1;transform:none}
-
-/* NAPAS */
+/* CHAT ROOM INTERAKTIF */
+.chat-box{padding:20px;display:flex;flex-direction:column;height:600px;max-width:800px;margin:0 auto}
+.chat-messages{flex-grow:1;overflow-y:auto;padding-right:10px;display:flex;flex-direction:column;gap:16px;margin-bottom:16px}
+.chat-messages::-webkit-scrollbar{width:6px}
+.chat-messages::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:10px}
+.msg{max-width:85%;padding:14px 18px;border-radius:20px;line-height:1.6;font-size:.95rem;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.msg.user{background:linear-gradient(135deg,#ffd877,#f0a93c);color:#2a1a00;align-self:flex-end;border-bottom-right-radius:4px;font-weight:500}
+.msg.ai{background:rgba(255,255,255,.08);border:1px solid var(--line);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.ai .ar{font-family:var(--ar);direction:rtl;text-align:center;font-size:1.35rem;color:#fff8e6;margin:8px 0 6px}
+.msg.ai .tr{font-size:.9rem;color:#e7ebff;margin-bottom:6px}
+.msg.ai .ref{color:var(--gold);font-weight:600;font-size:.8rem}
+.chat-input-row{display:flex;gap:10px;background:rgba(5,8,26,.6);border:1px solid var(--line);border-radius:999px;padding:6px 8px 6px 18px}
+.chat-input-row input{flex-grow:1;background:none;border:0;color:var(--ink);font:inherit;outline:none}
+.chat-input-row input::placeholder{color:#6f79a8}
+ /* NAPAS */
 .napas{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .panel{padding:clamp(20px,3vw,32px);text-align:center}
 .panel h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:6px}
@@ -158,12 +106,7 @@ ul.chk input:checked+span{text-decoration:line-through;opacity:.55}
 .dz{font-family:var(--ar);font-size:1.8rem;color:var(--gold2);min-height:3rem}
 @media(max-width:760px){.napas{grid-template-columns:1fr}}
 
-/* CARA & TENTANG */
-.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;counter-reset:s}
-.st{padding:26px;counter-increment:s;position:relative}
-.st::before{content:counter(s);font-family:var(--serif);font-size:3rem;font-weight:700;color:var(--gold);opacity:.8;display:block;line-height:1;margin-bottom:12px}
-.st h3{font-size:1.15rem;margin-bottom:6px}
-.st p{color:var(--muted);font-size:.94rem}
+/* TENTANG */
 .about{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
 .about .glass{padding:clamp(20px,3vw,32px)}
 .about h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:10px}
@@ -173,7 +116,6 @@ ul.chk input:checked+span{text-decoration:line-through;opacity:.55}
 footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:.86rem;border-top:1px solid rgba(255,255,255,.07)}
 footer .logo{justify-content:center;margin-bottom:10px;color:var(--ink)}
 footer strong{color:var(--gold2)}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -186,27 +128,26 @@ footer strong{color:var(--gold2)}
       FeelMe
     </a>
     <ul>
-      <li><a href="#curhat">Curhat</a></li>
+      <li><a href="#curhat">Chat Interaktif</a></li>
       <li><a href="#napas">Tenangkan diri</a></li>
-      <li><a href="#cara">Cara kerja</a></li>
       <li><a href="#tentang">Tentang</a></li>
     </ul>
-    <a class="btn btn-gold" href="#curhat" style="padding:9px 18px;font-size:.9rem">Mulai cerita</a>
+    <a class="btn btn-gold" href="#curhat" style="padding:9px 18px;font-size:.9rem">Mulai ngobrol</a>
   </div>
 </header>
- <main id="top">
+  <main id="top">
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow">Curhat Islami • Tanpa daftar</span>
+        <span class="eyebrow">Curhat Islami • Terus Menerus</span>
         <h1>Ceritakan saja. <em>Hatimu</em> didengarkan.</h1>
-        <p class="lead">Lagi sedih, cemas, lelah, atau bingung? Tulis apa adanya. FeelMe membaca perasaanmu lalu menjawab langsung dengan ayat Al-Qur'an, hadis, doa, dan langkah kecil yang bisa kamu lakukan hari ini.</p>
+        <p class="lead">Ketik keluh kesahmu, balas-balasan chat secara real-time. FeelMe mendengarkan dan merespons otomatis dengan ayat Al-Qur'an, hadis, serta pelukan kata yang menenangkan.</p>
         <div class="cta-row">
-          <a class="btn btn-gold" href="#curhat">✍️ Mulai curhat</a>
-          <a class="btn btn-ghost" href="#napas">🌬️ Tenangkan napas dulu</a>
+          <a class="btn btn-gold" href="#curhat">💬 Mulai Chat Interaktif</a>
+          <a class="btn btn-ghost" href="#napas">🌬️ Tenangkan napas</a>
         </div>
-        <div class="pills"><span class="pill">🔒 Ceritamu tidak dikirim ke server</span><span class="pill">📖 Berdasar Al-Qur'an &amp; Hadis</span><span class="pill">⚡ Jawaban instan</span></div>
+        <div class="pills"><span class="pill">🔒 Privasi aman di perangkatmu</span><span class="pill">📖 Al-Qur'an &amp; Hadis</span><span class="pill">✨ Chat Terus-Menerus</span></div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <svg class="moon" viewBox="0 0 100 100"><defs><radialGradient id="mg" cx=".35" cy=".35"><stop offset="0" stop-color="#fff6d8"/><stop offset="1" stop-color="#f6c667"/></radialGradient></defs><path d="M62 10a42 42 0 1 0 28 62A34 34 0 0 1 62 10z" fill="url(#mg)"/></svg>
@@ -216,38 +157,27 @@ footer strong{color:var(--gold2)}
     </div>
   </section>
 
-  <!-- CURHAT -->
+  <!-- CHAT INTERAKTIF TERUS-MENERUS -->
   <section id="curhat">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Ruang curhat</span>
-        <h2>Lagi ngerasa apa hari ini?</h2>
-        <p>Pilih perasaan yang paling dekat (boleh lebih dari satu), lalu tulis ceritamu. Makin lengkap ceritamu, makin pas jawabannya.</p>
+        <span class="eyebrow">Ruang Obrolan Interaktif</span>
+        <h2>Teman Cerita & Penenang Hati</h2>
+        <p>Ketik apa pun yang kamu rasakan. Kamu bisa terus membalas dan mengobrol panjang lebar layaknya asisten AI pribadi.</p>
       </div>
-      <form class="glass form reveal" id="form" autocomplete="off" novalidate>
-        <div class="row"><div style="flex:1;min-width:220px">
-          <label class="lbl" for="nama">Mau dipanggil apa? (boleh dikosongkan)</label>
-          <input class="input" id="nama" maxlength="24" placeholder="mis. Aisyah / Kak Rafi / Hamba Allah">
-        </div></div>
-        <label class="lbl" id="chipLbl">Perasaanmu (opsional)</label>
-        <div class="chips" id="chips" role="group" aria-labelledby="chipLbl"></div>
-        <label class="lbl" for="cerita">Ceritamu</label>
-        <textarea id="cerita" maxlength="1500" placeholder="Tulis apa saja yang mengganjal di hati. Tidak ada yang menghakimi di sini…"></textarea>
-        <p class="hint" id="hint" role="alert"></p>
-        <div class="form-foot">
-          <span class="count"><span id="cnt">0</span> / 1500</span>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <button type="button" class="btn btn-ghost" id="clear">Hapus</button>
-            <button type="submit" class="btn btn-gold" id="send">Kirim ke FeelMe ✨</button>
+      <div class="glass chat-box reveal">
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg ai">
+            <b>✨ FeelMe:</b><br>Assalamu'alaikum 🤍 Aku di sini mendengarkan ceritamu. Lagi ngerasa apa hari ini? Ceritakan apa saja yang mengganjal di hatimu...
           </div>
         </div>
-        <div class="privacy"><span>🔒</span><span>Ceritamu diproses di perangkatmu sendiri dan tidak disimpan atau dikirim ke mana pun. Tutup halaman ini, semuanya hilang.</span></div>
-      </form>
+        <form class="chat-input-row" id="chatForm">
+          <input type="text" id="chatInput" placeholder="Ketik keluh kesah atau balasanmu di sini..." autocomplete="off">
+          <button type="submit" class="btn btn-gold" style="padding:10px 20px;border-radius:999px">Kirim ✨</button>
+        </form>
+      </div>
     </div>
   </section>
-
-  <!-- HASIL -->
-  <section id="hasil" hidden aria-live="polite"><div class="wrap" id="hasilBox"></div></section>
 
   <!-- NAPAS -->
   <section id="napas">
@@ -255,7 +185,7 @@ footer strong{color:var(--gold2)}
       <div class="sec-head reveal">
         <span class="eyebrow">Tenangkan diri</span>
         <h2>Napas pelan, hati ikut pelan.</h2>
-        <p>Ikuti lingkaran sambil berdzikir dalam hati. Cocok dipakai sebelum curhat atau saat dada terasa sesak.</p>
+        <p>Ikuti lingkaran sambil berdzikir dalam hati saat dada terasa sesak.</p>
       </div>
       <div class="napas">
         <div class="glass panel reveal">
@@ -277,42 +207,18 @@ footer strong{color:var(--gold2)}
       </div>
     </div>
   </section>
-       <!-- CARA -->
-  <section id="cara">
-    <div class="wrap">
-      <div class="sec-head reveal"><span class="eyebrow">Cara kerja</span><h2>Tiga langkah, satu pelukan.</h2></div>
-      <div class="steps3">
-        <div class="glass st reveal"><h3>Tulis ceritamu</h3><p>Ceritakan apa pun: masalah, rasa takut, kecewa, atau sekadar unek-unek. Pilih label perasaan kalau bingung memulai.</p></div>
-        <div class="glass st reveal"><h3>FeelMe membaca rasanya</h3><p>Sistem mengenali emosi utama dari kata-kata dan konteks ceritamu, termasuk rasa kedua yang tersembunyi.</p></div>
-        <div class="glass st reveal"><h3>Dapat jawaban yang menenangkan</h3><p>Kamu menerima ayat, hadis, doa lengkap dengan bacaan latin dan artinya, plus langkah kecil yang bisa dicentang.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TENTANG -->
+    <!-- TENTANG -->
   <section id="tentang">
     <div class="wrap">
       <div class="sec-head reveal"><span class="eyebrow">Tentang FeelMe</span><h2>Dibuat supaya tidak ada yang merasa sendirian.</h2></div>
       <div class="about">
         <div class="glass reveal">
           <h3>Latar belakang &amp; tujuan</h3>
-          <p>Banyak remaja memendam perasaan karena bingung harus bercerita ke siapa. FeelMe dibuat sebagai teman bercerita pertama yang selalu tersedia, lalu mengarahkan hati kembali kepada Allah lewat tuntunan Al-Qur'an dan sunnah, dengan bahasa yang dekat dan tidak menggurui.</p>
-          <h3 style="margin-top:18px">Batasan</h3>
-          <ul>
-            <li>Jawaban dibuat otomatis dari pola kata pada ceritamu, bukan fatwa dan bukan pengganti ustaz/ustazah, guru, atau psikolog.</li>
-            <li>Untuk hukum agama yang rumit, tanyakan kepada guru atau ulama yang kamu percaya.</li>
-            <li>Jika kamu berpikir untuk menyakiti diri sendiri, segera hubungi orang terdekat atau layanan darurat.</li>
-          </ul>
+          <p>FeelMe adalah ruang curhat interaktif berbasis bimbingan Al-Qur'an dan Sunnah yang siap menemani kapan pun kamu butuh pendengar setia.</p>
         </div>
         <div class="glass reveal">
-          <h3>Sumber rujukan</h3>
-          <ul>
-            <li>Al-Qur'an al-Karim</li>
-            <li>Shahih al-Bukhari &amp; Shahih Muslim</li>
-            <li>Sunan at-Tirmidzi, Abu Dawud, Ibnu Majah</li>
-          </ul>
-          <h3 style="margin-top:18px">Identitas pembuat</h3>
-          <p>FeelMe Team<br>Pendidikan Agama Islam</p>
+          <h3>Identitas pembuat</h3>
+          <p><strong>NAMA_KAMU</strong><br>Pendidikan Agama Islam</p>
         </div>
       </div>
     </div>
@@ -322,433 +228,125 @@ footer strong{color:var(--gold2)}
 <footer>
   <div class="wrap">
     <div class="logo"><span>FeelMe</span></div>
-    <p>Dibuat dengan 🤍 oleh <strong>FeelMe Team</strong> • Teman Curhat Islami</p>
-    <p style="margin-top:6px">Ruang ini menemani, bukan pengganti ustaz atau tenaga profesional.</p>
+    <p>Dibuat dengan 🤍 oleh <strong>NAMA_KAMU</strong> • Teman Curhat Islami</p>
   </div>
 </footer>
 
-<div class="loader" id="loader" hidden role="status">
-  <div><div class="orb" id="loadOrb"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div></div><p id="loadMsg">Menyimak ceritamu…</p></div>
-</div>
-
-<!-- ===================== DATA + ENGINE (murni, tanpa DOM) ===================== -->
-<script id="engine">
+<!-- ===================== MESIN ANALISIS & CHAT INTERAKTIF ===================== -->
+<script>
 const V={
- insyirah:{ar:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا",id:"Sesungguhnya bersama kesulitan ada kemudahan. Sekali lagi, sesungguhnya bersama kesulitan ada kemudahan.",ref:"QS. Al-Insyirah: 5–6"},
+ insyirah:{ar:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",id:"Sesungguhnya bersama kesulitan ada kemudahan.",ref:"QS. Al-Insyirah: 5"},
  baqarah286:{ar:"لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",id:"Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya.",ref:"QS. Al-Baqarah: 286"},
  raad28:{ar:"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",id:"Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram.",ref:"QS. Ar-Ra'd: 28"},
  taubah40:{ar:"لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",id:"Jangan bersedih, sesungguhnya Allah bersama kita.",ref:"QS. At-Taubah: 40"},
  duha3:{ar:"مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",id:"Tuhanmu tidak meninggalkanmu dan tidak pula membencimu.",ref:"QS. Ad-Duha: 3"},
- zumar53:{ar:"قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",id:"Katakanlah: Wahai hamba-hamba-Ku yang melampaui batas terhadap dirinya sendiri, janganlah berputus asa dari rahmat Allah.",ref:"QS. Az-Zumar: 53"},
- baqarah153:{ar:"يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ",id:"Wahai orang-orang beriman, mintalah pertolongan dengan sabar dan shalat.",ref:"QS. Al-Baqarah: 153"},
- talaq:{ar:"وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ",id:"Siapa yang bertakwa kepada Allah, Dia akan memberinya jalan keluar, dan memberinya rezeki dari arah yang tidak disangka-sangka.",ref:"QS. At-Talaq: 2–3"},
- baqarah216:{ar:"وَعَسَىٰ أَن تَكْرَهُوا شَيْئًا وَهُوَ خَيْرٌ لَّكُمْ",id:"Boleh jadi kamu membenci sesuatu, padahal itu baik bagimu.",ref:"QS. Al-Baqarah: 216"},
- ghafir60:{ar:"وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ",id:"Tuhanmu berfirman: Berdoalah kepada-Ku, niscaya Aku kabulkan untukmu.",ref:"QS. Ghafir: 60"},
- baqarah186:{ar:"وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ",id:"Apabila hamba-hamba-Ku bertanya tentang Aku, maka sesungguhnya Aku dekat.",ref:"QS. Al-Baqarah: 186"},
- qaf16:{ar:"وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنْ حَبْلِ الْوَرِيدِ",id:"Kami lebih dekat kepadanya daripada urat lehernya sendiri.",ref:"QS. Qaf: 16"},
- ibrahim7:{ar:"لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",id:"Jika kamu bersyukur, niscaya Aku akan menambah (nikmat) kepadamu.",ref:"QS. Ibrahim: 7"},
- duha11:{ar:"وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",id:"Dan terhadap nikmat Tuhanmu, hendaklah engkau menyebut-nyebutnya (dengan bersyukur).",ref:"QS. Ad-Duha: 11"},
- rum21:{ar:"وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً",id:"Dan Dia menjadikan di antaramu rasa kasih dan sayang.",ref:"QS. Ar-Rum: 21"},
+ zumar53:{ar:"قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",id:"Wahai hamba-hamba-Ku yang melampaui batas, janganlah berputus asa dari rahmat Allah.",ref:"QS. Az-Zumar: 53"},
+ talaq:{ar:"وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",id:"Siapa yang bertakwa kepada Allah, Dia akan memberinya jalan keluar.",ref:"QS. At-Talaq: 2"},
  syuara80:{ar:"وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ",id:"Dan apabila aku sakit, Dialah yang menyembuhkanku.",ref:"QS. Asy-Syu'ara: 80"},
- tin4:{ar:"لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ",id:"Sungguh, Kami telah menciptakan manusia dalam bentuk yang sebaik-baiknya.",ref:"QS. At-Tin: 4"},
- hujurat13:{ar:"إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ",id:"Sesungguhnya yang paling mulia di antara kamu di sisi Allah ialah yang paling bertakwa.",ref:"QS. Al-Hujurat: 13"},
- fussilat34:{ar:"ادْفَعْ بِالَّتِي هِيَ أَحْسَنُ فَإِذَا الَّذِي بَيْنَكَ وَبَيْنَهُ عَدَاوَةٌ كَأَنَّهُ وَلِيٌّ حَمِيمٌ",id:"Tolaklah keburukan dengan cara yang lebih baik, maka orang yang tadinya memusuhimu bisa menjadi seperti sahabat yang akrab.",ref:"QS. Fussilat: 34"},
- imran134:{ar:"وَالْكَاظِمِينَ الْغَيْظَ وَالْعَافِينَ عَنِ النَّاسِ",id:"(Orang bertakwa adalah) mereka yang menahan amarahnya dan memaafkan orang lain.",ref:"QS. Ali 'Imran: 134"},
- imran139:{ar:"وَلَا تَهِنُوا وَلَا تَحْزَنُوا وَأَنتُمُ الْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ",id:"Janganlah kamu merasa lemah dan janganlah bersedih hati, padahal kamulah yang paling tinggi jika kamu beriman.",ref:"QS. Ali 'Imran: 139"},
- imran159:{ar:"فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى اللَّهِ إِنَّ اللَّهَ يُحِبُّ الْمُتَوَكِّلِينَ",id:"Apabila engkau telah membulatkan tekad, bertawakallah kepada Allah. Sungguh Allah mencintai orang-orang yang bertawakal.",ref:"QS. Ali 'Imran: 159"},
- isra23:{ar:"وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا",id:"Tuhanmu telah memerintahkan agar kamu tidak menyembah selain Dia, dan hendaklah berbuat baik kepada kedua orang tua.",ref:"QS. Al-Isra: 23"},
- hujurat10:{ar:"إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ فَأَصْلِحُوا بَيْنَ أَخَوَيْكُمْ",id:"Sesungguhnya orang-orang mukmin itu bersaudara, maka damaikanlah antara kedua saudaramu.",ref:"QS. Al-Hujurat: 10"},
- baqarah155:{ar:"وَبَشِّرِ الصَّابِرِينَ ۝ الَّذِينَ إِذَا أَصَابَتْهُم مُّصِيبَةٌ قَالُوا إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",id:"Berilah kabar gembira kepada orang-orang yang sabar, yaitu mereka yang ketika ditimpa musibah mengucapkan: sesungguhnya kami milik Allah dan kepada-Nya kami kembali.",ref:"QS. Al-Baqarah: 155–156"},
- nur31:{ar:"وَتُوبُوا إِلَى اللَّهِ جَمِيعًا أَيُّهَا الْمُؤْمِنُونَ لَعَلَّكُمْ تُفْلِحُونَ",id:"Bertobatlah kamu semua kepada Allah, wahai orang-orang beriman, agar kamu beruntung.",ref:"QS. An-Nur: 31"},
- furqan70:{ar:"فَأُولَٰئِكَ يُبَدِّلُ اللَّهُ سَيِّئَاتِهِمْ حَسَنَاتٍ",id:"Bagi mereka yang bertobat, beriman, dan beramal saleh, Allah mengganti keburukan mereka dengan kebaikan.",ref:"QS. Al-Furqan: 70"},
- nisa32:{ar:"وَلَا تَتَمَنَّوْا مَا فَضَّلَ اللَّهُ بِهِ بَعْضَكُمْ عَلَىٰ بَعْضٍ",id:"Janganlah kamu iri terhadap apa yang telah dilebihkan Allah kepada sebagian kamu atas sebagian yang lain.",ref:"QS. An-Nisa: 32"},
- ankabut69:{ar:"وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا",id:"Orang-orang yang bersungguh-sungguh di jalan Kami, pasti Kami tunjukkan jalan-jalan Kami.",ref:"QS. Al-'Ankabut: 69"},
- hadid16:{ar:"أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَن تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ",id:"Belum tibakah waktunya bagi orang-orang beriman untuk khusyuk hati mereka mengingat Allah?",ref:"QS. Al-Hadid: 16"}
+ isra23:{ar:"وَبِالْوَالِدَيْنِ إِحْسَانًا",id:"Dan hendaklah berbuat baik kepada kedua orang tua.",ref:"QS. Al-Isra: 23"},
+ ibrahim7:{ar:"لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",id:"Jika kamu bersyukur, niscaya Aku akan menambah nikmat kepadamu.",ref:"QS. Ibrahim: 7"}
 };
-const H={
- musibah:{t:"Tidaklah seorang muslim ditimpa kelelahan, sakit, kekhawatiran, kesedihan, gangguan, sampai duri yang menusuknya, kecuali Allah menghapus sebagian kesalahannya dengan itu.",r:"HR. Bukhari & Muslim"},
- ajaib:{t:"Urusan orang beriman itu menakjubkan: semuanya baik baginya. Jika diberi kelapangan ia bersyukur, itu baik. Jika ditimpa kesulitan ia bersabar, itu pun baik.",r:"HR. Muslim"},
- pena:{t:"Ketahuilah, seandainya seluruh manusia berkumpul untuk memberimu manfaat atau mencelakakanmu, mereka tidak mampu kecuali sebatas yang telah Allah tetapkan. Pena telah diangkat dan lembaran telah kering.",r:"HR. Tirmidzi (dari Ibnu 'Abbas)"},
- burung:{t:"Seandainya kalian bertawakal kepada Allah dengan sebenar-benarnya, Dia akan memberi rezeki kepada kalian seperti burung: pergi pagi dalam keadaan lapar, pulang sore dalam keadaan kenyang.",r:"HR. Tirmidzi"},
- rezekijiwa:{t:"Sesungguhnya jiwa tidak akan mati sampai sempurna rezekinya. Maka bertakwalah kepada Allah dan perbaguslah cara mencarinya.",r:"HR. Ibnu Majah"},
+  const H={
+ musibah:{t:"Tidaklah seorang muslim ditimpa kelelahan atau kesedihan, kecuali Allah menghapus kesalahan-kesalahannya.",r:"HR. Bukhari & Muslim"},
+ ajaib:{t:"Urusan orang beriman itu semuanya baik baginya.",r:"HR. Muslim"},
  marah:{t:"Orang kuat itu bukan yang menang saat bergulat, tetapi yang mampu menguasai dirinya ketika marah.",r:"HR. Bukhari & Muslim"},
- janganmarah:{t:"Seorang lelaki meminta nasihat kepada Nabi ﷺ. Beliau bersabda, “Jangan marah,” dan beliau mengulanginya beberapa kali.",r:"HR. Bukhari"},
- duduk:{t:"Jika salah seorang kalian marah dalam keadaan berdiri, hendaklah ia duduk. Jika marahnya belum hilang, hendaklah ia berbaring.",r:"HR. Abu Dawud"},
- tubuh:{t:"Sesungguhnya tubuhmu punya hak atas dirimu, matamu punya hak atas dirimu, dan keluargamu punya hak atas dirimu. Maka berikanlah setiap yang berhak haknya.",r:"HR. Bukhari"},
- mudah:{t:"Sesungguhnya agama ini mudah. Tidak ada yang memberat-beratkannya kecuali ia akan terkalahkan. Maka luruskanlah, dekatkanlah, dan sampaikan kabar gembira.",r:"HR. Bukhari"},
- kuat:{t:"Mukmin yang kuat lebih baik dan lebih dicintai Allah daripada mukmin yang lemah, dan pada keduanya ada kebaikan. Bersemangatlah pada hal yang bermanfaat bagimu, mintalah pertolongan Allah, dan jangan lemah. Jika kamu ditimpa sesuatu, jangan berkata “andai tadi aku begini”, tetapi katakan “Allah telah menakdirkan, dan apa yang Dia kehendaki terjadi.”",r:"HR. Muslim"},
- bawah:{t:"Lihatlah orang yang berada di bawahmu, jangan melihat orang yang di atasmu. Itu lebih pantas agar kamu tidak meremehkan nikmat Allah atas dirimu.",r:"HR. Muslim"},
- bertaubat:{t:"Setiap anak Adam pasti pernah berbuat salah, dan sebaik-baik orang yang bersalah adalah yang banyak bertobat.",r:"HR. Tirmidzi & Ibnu Majah"},
- iringi:{t:"Bertakwalah kepada Allah di mana pun kamu berada, iringilah keburukan dengan kebaikan niscaya kebaikan itu menghapusnya, dan bergaullah dengan manusia dengan akhlak yang baik.",r:"HR. Tirmidzi"},
- cintai:{t:"Tidak sempurna iman seseorang di antara kalian sampai ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.",r:"HR. Bukhari & Muslim"},
- katabaik:{t:"Barangsiapa beriman kepada Allah dan hari akhir, hendaklah ia berkata baik atau diam.",r:"HR. Bukhari & Muslim"},
- bantu:{t:"Allah akan senantiasa menolong hamba selama hamba itu menolong saudaranya.",r:"HR. Muslim"},
- senyum:{t:"Senyummu kepada saudaramu adalah sedekah.",r:"HR. Tirmidzi"},
- keluarga:{t:"Sebaik-baik kalian adalah yang terbaik kepada keluarganya, dan aku adalah yang terbaik di antara kalian kepada keluargaku.",r:"HR. Tirmidzi"},
- obat:{t:"Allah tidak menurunkan penyakit kecuali Dia juga menurunkan obatnya.",r:"HR. Bukhari"},
- menangis:{t:"Saat putranya, Ibrahim, wafat, Nabi ﷺ bersabda: “Mata meneteskan air mata, hati bersedih, dan kami tidak mengucapkan kecuali yang diridai Tuhan kami.”",r:"HR. Bukhari"},
- sabarawal:{t:"Sesungguhnya sabar itu ada pada benturan pertama (saat musibah baru menimpa).",r:"HR. Bukhari & Muslim"},
- kontinu:{t:"Amal yang paling dicintai Allah adalah yang terus-menerus dilakukan, meskipun sedikit.",r:"HR. Bukhari & Muslim"},
- istikharah:{t:"Jika salah seorang kalian bingung dalam suatu urusan, hendaklah ia shalat dua rakaat (di luar shalat wajib), lalu berdoa istikharah.",r:"HR. Bukhari"},
- syukurmanusia:{t:"Siapa yang tidak berterima kasih kepada manusia, berarti ia belum bersyukur kepada Allah.",r:"HR. Abu Dawud & Tirmidzi"},
- duanikmat:{t:"Dua nikmat yang sering membuat manusia tertipu: kesehatan dan waktu luang.",r:"HR. Bukhari"},
- dikabul:{t:"Doa salah seorang kalian akan dikabulkan selama ia tidak tergesa-gesa, yaitu berkata “aku sudah berdoa tapi belum juga dikabulkan.”",r:"HR. Bukhari & Muslim"},
- ridha:{t:"Rida Allah ada pada rida orang tua, dan murka Allah ada pada murka orang tua.",r:"HR. Tirmidzi"}
-};
-const D={
-    hamm:{ar:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ",lat:"Allahumma inni a'udzu bika minal hammi wal hazan, wal 'ajzi wal kasal, wal bukhli wal jubn, wa dhala'id dayni wa ghalabatir rijal.",arti:"Ya Allah, aku berlindung kepada-Mu dari gelisah dan sedih, lemah dan malas, kikir dan pengecut, lilitan utang dan tekanan orang lain.",ref:"HR. Bukhari"},
- yunus:{ar:"لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",lat:"La ilaha illa anta subhanaka inni kuntu minazh zhalimin.",arti:"Tiada Tuhan selain Engkau, Maha Suci Engkau, sungguh aku termasuk orang yang zalim terhadap diriku sendiri.",ref:"QS. Al-Anbiya: 87"},
- hasbi:{ar:"حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",lat:"Hasbiyallahu la ilaha illa huwa, 'alaihi tawakkaltu wa huwa rabbul 'arsyil 'azhim.",arti:"Cukuplah Allah bagiku, tiada Tuhan selain Dia. Hanya kepada-Nya aku bertawakal, dan Dia Tuhan pemilik 'Arsy yang agung.",ref:"QS. At-Taubah: 129"},
- syarah:{ar:"رَبِّ اشْرَحْ لِي صَدْرِي ۝ وَيَسِّرْ لِي أَمْرِي",lat:"Rabbisyrah li shadri, wa yassir li amri.",arti:"Ya Tuhanku, lapangkanlah dadaku dan mudahkanlah urusanku.",ref:"QS. Thaha: 25–26"},
- istighfar:{ar:"أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ",lat:"Astaghfirullahal 'azhim alladzi la ilaha illa huwal hayyul qayyum wa atubu ilaih.",arti:"Aku memohon ampun kepada Allah Yang Maha Agung, tiada Tuhan selain Dia Yang Maha Hidup lagi Maha Berdiri Sendiri, dan aku bertobat kepada-Nya.",ref:"HR. Abu Dawud & Tirmidzi"},
- zalamna:{ar:"رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ",lat:"Rabbana zhalamna anfusana wa il lam taghfir lana wa tarhamna lanakunanna minal khasirin.",arti:"Ya Tuhan kami, kami telah menzalimi diri kami sendiri. Jika Engkau tidak mengampuni dan merahmati kami, pastilah kami termasuk orang-orang yang rugi.",ref:"QS. Al-A'raf: 23"},
- taawudz:{ar:"أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",lat:"A'udzu billahi minasy syaithanir rajim.",arti:"Aku berlindung kepada Allah dari godaan setan yang terkutuk. (Dianjurkan Nabi ﷺ saat marah.)",ref:"HR. Bukhari & Muslim"},
- kafini:{ar:"اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ",lat:"Allahummak-fini bihalalika 'an haramik, wa aghnini bifadhlika 'amman siwak.",arti:"Ya Allah, cukupkanlah aku dengan rezeki halal-Mu sehingga aku tak butuh yang haram, dan kayakanlah aku dengan karunia-Mu sehingga aku tak bergantung kepada selain-Mu.",ref:"HR. Tirmidzi"},
- syifa:{ar:"اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا",lat:"Allahumma rabban nas, adzhibil ba's, isyfi antasy syafi, la syifa'a illa syifa'uk, syifa'an la yughadiru saqama.",arti:"Ya Allah, Tuhan manusia, hilangkanlah penyakit ini, sembuhkanlah, Engkaulah Maha Penyembuh. Tiada kesembuhan selain kesembuhan dari-Mu, kesembuhan yang tidak meninggalkan sakit.",ref:"HR. Bukhari & Muslim"},
- musibah:{ar:"إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا",lat:"Inna lillahi wa inna ilaihi raji'un. Allahumma'jurni fi mushibati wakhluf li khairan minha.",arti:"Kami milik Allah dan kepada-Nya kami kembali. Ya Allah, berilah aku pahala dalam musibahku dan gantilah dengan yang lebih baik.",ref:"HR. Muslim"},
- hab:{ar:"رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",lat:"Rabbana hab lana min azwajina wa dzurriyyatina qurrata a'yunin waj'alna lilmuttaqina imama.",arti:"Ya Tuhan kami, anugerahkanlah kepada kami pasangan dan keturunan yang menyejukkan hati, dan jadikanlah kami pemimpin bagi orang-orang bertakwa.",ref:"QS. Al-Furqan: 74"},
- istikharah:{ar:"اللَّهُمَّ إِنِّي أَسْتَخِيرُكَ بِعِلْمِكَ وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ وَأَسْأَلُكَ مِنْ فَضْلِكَ الْعَظِيمِ",lat:"Allahumma inni astakhiruka bi'ilmika wa astaqdiruka biqudratika wa as'aluka min fadhlikal 'azhim.",arti:"Ya Allah, aku memohon pilihan terbaik dengan ilmu-Mu, memohon kekuatan dengan kuasa-Mu, dan memohon karunia-Mu yang agung. (Bagian awal doa istikharah; lengkapnya ada pada HR. Bukhari.)",ref:"HR. Bukhari"},
- faqir:{ar:"رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ",lat:"Rabbi inni lima anzalta ilayya min khairin faqir.",arti:"Ya Tuhanku, sungguh aku sangat membutuhkan kebaikan apa pun yang Engkau turunkan kepadaku.",ref:"QS. Al-Qasas: 24"},
- tsabbit:{ar:"يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَىٰ دِينِكَ",lat:"Ya muqallibal qulub, tsabbit qalbi 'ala dinik.",arti:"Wahai Dzat yang membolak-balikkan hati, teguhkanlah hatiku di atas agama-Mu.",ref:"HR. Tirmidzi"},
- sabar:{ar:"رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا",lat:"Rabbana afrigh 'alaina shabran wa tsabbit aqdamana.",arti:"Ya Tuhan kami, limpahkanlah kesabaran kepada kami dan teguhkanlah langkah kami.",ref:"QS. Al-Baqarah: 250"},
- syukur:{ar:"الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ",lat:"Alhamdulillahilladzi bini'matihi tatimmush shalihat.",arti:"Segala puji bagi Allah yang dengan nikmat-Nya sempurnalah segala kebaikan.",ref:"HR. Ibnu Majah"},
- walidain:{ar:"رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",lat:"Rabbirhamhuma kama rabbayani shaghira.",arti:"Ya Tuhanku, sayangilah keduanya sebagaimana mereka mendidikku sewaktu kecil.",ref:"QS. Al-Isra: 24"},
- hasanah:{ar:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",lat:"Rabbana atina fid dunya hasanah, wa fil akhirati hasanah, wa qina 'adzaban nar.",arti:"Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka.",ref:"QS. Al-Baqarah: 201"}
+ obat:{t:"Allah tidak menurunkan penyakit kecuali Dia juga menurunkan obatnya.",r:"HR. Bukhari"}
 };
 
-/* kw: awalan "=" berarti kata persis; mengandung spasi berarti frasa; "kata:0.5" memberi bobot. */
 const C={
- sedih:{label:"Sedih & kecewa",chip:"Sedih",e:"🌧️",c1:"#7b8cff",c2:"#8ec5ff",
-  kw:["sedih","nangis","menangis","tangis","galau","kecewa","hancur","terluka","sakithati","murung","hampa:.6","perih","terpuruk","nyesek","sesak","=down","patah semangat","gak baik baik aja","ga baik baik aja","nggak baik baik aja","tidak baik baik saja","gak baik baik saja","ga baik baik saja","terpukul","pilu","nelangsa","menderita","kesedihan"],
-  hug:["Pelan-pelan dulu ya. Sedih bukan tanda imanmu kurang. Nabi ﷺ sendiri pernah menangis dan bersedih. Ada Allah yang mendengar bahkan sebelum kamu selesai bercerita.","Yang kamu rasakan itu wajar, dan kamu tidak berlebihan. Hatimu sedang butuh dipeluk, bukan dihakimi. Allah Maha Dekat, termasuk di malam-malam yang terasa paling berat."],
-  ayat:["duha3","taubah40"],hadis:["musibah","ajaib"],doa:["hamm"],
-  steps:["Izinkan dirimu menangis. Air mata bukan kelemahan.","Berwudu, shalat dua rakaat, lalu sujud agak lama dan ceritakan semuanya kepada Allah.","Ceritakan ke satu orang yang kamu percaya, cukup satu.","Keluar rumah 10 menit: jalan kaki, cari udara dan cahaya matahari.","Tulis 3 hal kecil yang masih kamu syukuri hari ini."],
-  affirm:"Aku boleh bersedih, dan aku tetap dijaga oleh Allah."},
- cemas:{label:"Cemas & overthinking",chip:"Cemas",e:"🌀",c1:"#a78bfa",c2:"#7dd3fc",
-  kw:["cemas","takut","khawatir","kuatir","overthink","panik","gelisah","deg degan","anxiety","anxious","waswas","was was","resah","gugup","ngeri","tegang","kepikiran","mikirin","masa depan","gak bisa tidur","ga bisa tidur","nggak bisa tidur","tidak bisa tidur","susah tidur","insomnia","ujian:.6","skripsi:.6","sidang:.6","trauma:.6"],
-  hug:["Pikiranmu lagi ramai sekali ya. Cemas tandanya kamu peduli, tapi kamu tidak harus memikul semua kemungkinan sendirian. Ada bagian yang memang bukan wilayah kendalimu, itu urusan Allah.","Tarik napas dulu. Banyak hal yang kamu takutkan belum tentu terjadi, dan kalaupun terjadi, kamu tidak berjalan sendirian."],
-  ayat:["raad28","baqarah286"],hadis:["pena","burung"],doa:["hasbi"],
-  steps:["Tarik napas 4 detik, tahan 4, hembuskan 6 sambil berdzikir. Coba fitur Napas Berdzikir di bawah.","Tulis semua yang kamu khawatirkan, lalu tandai mana yang bisa kamu kerjakan hari ini dan mana yang harus diserahkan kepada Allah.","Kerjakan satu langkah kecil dari bagian yang bisa kamu kendalikan, lalu bertawakal.","Kurangi scroll media sosial dan berita menjelang tidur."],
-  affirm:"Aku sudah berusaha. Sisanya kuserahkan kepada Allah."},
- marah:{label:"Marah & kesal",chip:"Marah",e:"🔥",c1:"#fb7185",c2:"#fdba74",
-  kw:["marah","kesal","kesel","emosi","benci","dendam","jengkel","sebel","murka","geram","dongkol","muak","naik darah","pengen teriak","pengin teriak"],
-  hug:["Marahmu bisa dimengerti. Ada hal yang memang menyakitkan. Hanya saja jangan sampai kamu yang terbakar paling parah. Kita redakan dulu, baru putuskan langkahnya.","Rasa kesal itu sinyal bahwa ada batasmu yang dilanggar. Itu valid. Yang perlu dijaga adalah cara kita menyalurkannya, supaya tidak menyisakan penyesalan."],
-  ayat:["imran134","fussilat34"],hadis:["marah","janganmarah"],doa:["taawudz"],
-  steps:["Ucapkan a'udzubillahi minasy syaithanir rajim, lalu diam dulu sebelum membalas apa pun.","Ubah posisi: kalau berdiri, duduklah. Kalau masih panas, berbaringlah atau berwudu.","Tulis semua unek-unek di catatan (jangan dikirim), baca lagi besok pagi.","Setelah tenang, sampaikan keberatanmu dengan kalimat “aku merasa …”, bukan menyerang."],
-  affirm:"Aku memilih tenang, bukan karena lemah, tapi karena kuat."},
- lelah:{label:"Lelah & stres",chip:"Lelah",e:"🪫",c1:"#fbbf24",c2:"#fb923c",
-  kw:["capek","cape","lelah","burnout","stres","stress","jenuh","penat","letih","gak kuat","ga kuat","nggak kuat","tidak kuat","tertekan","tekanan","bosan","males:.6","malas:.6","kewalahan","overwhelm","numpuk","deadline","tugas:.4","kerjaan:.4","lembur"],
-  hug:["Kamu kelihatannya sudah lama berjuang tanpa sempat istirahat. Capek itu bukan dosa dan bukan kemalasan. Nabi ﷺ sendiri mengajarkan bahwa tubuhmu punya hak atas dirimu.","Berhenti sejenak bukan berarti menyerah. Kamu sedang mengisi ulang tenaga supaya bisa berjalan lagi dengan lebih baik."],
-  ayat:["baqarah286","insyirah"],hadis:["tubuh","mudah"],doa:["sabar"],
-  steps:["Tidur lebih awal malam ini, dan taruh HP jauh dari kasur.","Pilih 1 prioritas hari ini. Sisanya tulis untuk besok.","Shalat dengan tenang, perpanjang sujud, dan “ngobrol” dengan Allah.","Makan teratur, minum cukup, dan jalan kaki 10 menit."],
-  affirm:"Istirahat bukan kelemahan. Itu bagian dari ikhtiar."},
- sepi:{label:"Kesepian",chip:"Kesepian",e:"🌙",c1:"#818cf8",c2:"#c4b5fd",
-  kw:["sepi","kesepian","sendirian","sendiri:.5","gak punya teman","ga punya teman","nggak punya teman","tidak punya teman","gak ada teman","ga ada teman","tidak ada teman","gak ada yang peduli","ga ada yang peduli","tidak ada yang peduli","nggak ada yang peduli","gak ada yang ngerti","ga ada yang ngerti","tidak ada yang mengerti","nggak ada yang ngerti","dikucilkan","diabaikan","terasing","gak dianggap","ga dianggap","nggak dianggap","tidak dianggap","merasa sendiri","gak ada tempat cerita","ga ada tempat cerita","tidak ada tempat cerita","nggak ada tempat cerita"],
-  hug:["Merasa sendirian itu berat sekali, apalagi kalau di sekelilingmu ramai tapi tidak ada yang benar-benar mendengar. Malam ini, kamu sudah memberi dirimu satu hal: berani bercerita.","Kamu mungkin merasa tidak ada yang paham, tapi Allah paham, bahkan hal yang belum sempat kamu ucapkan."],
-  ayat:["duha3","qaf16"],hadis:["bantu","senyum"],doa:["faqir"],
-  steps:["Sapa satu orang hari ini. Kirim pesan singkat “lagi apa?” atau “makasih ya”.","Cari ruang yang hangat: kajian, remaja masjid, komunitas hobi, atau kegiatan sukarela.","Isi malammu dengan shalat malam atau dzikir, lalu ceritakan semuanya kepada Allah.","Berbuat baik kecil kepada orang lain. Pertemanan sering tumbuh dari memberi."],
-  affirm:"Aku tidak sendirian. Allah dekat, dan orang baik itu ada."},
- minder:{label:"Minder & merasa gagal",chip:"Minder",e:"🌱",c1:"#34d399",c2:"#a7f3d0",
-  kw:["minder","insecure","rendah diri","gak percaya diri","ga percaya diri","tidak percaya diri","nggak percaya diri","gagal","kegagalan","gak berguna","ga berguna","tidak berguna","nggak berguna","gak becus","ga becus","payah","bodoh","jelek","=iri","dibandingkan","dibanding","bandingin","membandingkan","nyerah","menyerah","putusasa","gak mampu","ga mampu","tidak mampu","ditolak","gak layak","ga layak","tidak layak","beban","gak ada harapan","tidak ada harapan","gak lolos","ga lolos","tidak lolos","nggak lolos","gak diterima","ga diterima","tidak diterima","pecundang","tertinggal","gak pantas","tidak pantas"],
-  hug:["Kegagalan itu menyakitkan, tapi ia bukan vonis atas dirimu. Banyak hal baik di hidup ini lahir dari proses yang berantakan dulu.","Perasaan “aku kurang” sering datang saat kita membandingkan bab 1 hidup kita dengan bab 20 orang lain. Kamu diciptakan dengan nilai yang tidak ditentukan oleh hasil."],
-  ayat:["tin4","hujurat13"],hadis:["kuat","bawah"],doa:["syarah"],
-  steps:["Tulis 3 hal yang kamu bisa dan pernah kamu lalui.","Berhenti membandingkan. Ganti pertanyaannya jadi: “satu langkah kecil apa yang bisa kulakukan hari ini?”","Evaluasi kegagalanmu: apa pelajarannya? Setelah itu maafkan dirimu.","Ceritakan ke guru atau mentor, dan minta masukan yang jujur."],
-  affirm:"Nilaiku tidak ditentukan oleh hasil hari ini."},
- dosa:{label:"Menyesal & merasa berdosa",chip:"Menyesal",e:"🕊️",c1:"#e879f9",c2:"#fde68a",
-  kw:["dosa","menyesal","penyesalan","khilaf","maksiat","taubat","tobat","bertaubat","bersalah","malu sama allah","malu kepada allah","malu ke allah","zina","gak diampuni","ga diampuni","tidak diampuni","nggak diampuni","kecanduan","candu","porno","onani","masturbasi","judi","judol","kebiasaan buruk","jatuh lagi","ngulang lagi","mengulang lagi","kotor","tidak pantas dimaafkan","gak pantas dimaafkan"],
-  hug:["Rasa menyesal itu tandanya hatimu masih hidup dan masih ingin kembali. Itu bukan akhir. Justru dari sinilah pintu pulang dimulai.","Kamu tidak harus sempurna untuk kembali kepada Allah. Kamu hanya perlu melangkah satu langkah, dan Dia datang dengan rahmat-Nya."],
-  ayat:["zumar53","furqan70"],hadis:["bertaubat","iringi"],doa:["zalamna","istighfar"],
-  steps:["Berhenti dari perbuatannya sekarang, menyesal, dan bertekad tidak mengulanginya.","Jika menyangkut hak orang lain, minta maaf dan kembalikan haknya.","Shalat taubat dua rakaat dan perbanyak istighfar.","Iringi dengan kebaikan, jauhi pemicunya, dan cari teman yang saling menguatkan. Kalau terjerat kecanduan, mintalah bantuan orang dewasa tepercaya atau profesional."],
-  affirm:"Pintu taubat selalu terbuka, dan aku melangkah masuk hari ini."},
- cinta:{label:"Cinta & patah hati",chip:"Patah hati",e:"💔",c1:"#f472b6",c2:"#fda4af",
-  kw:["pacar","mantan","=putus","jodoh","gebetan","cinta","diselingkuhi","selingkuh","ghosting","baper","=crush","pdkt","jomblo","belum menikah","belum nikah","menikah","nikah","taaruf","tunangan","rindu:.6","kangen:.6","move on","=moveon","ldr","lamar","calon suami","calon istri","cerai","perceraian","patah hati"],
-  hug:["Patah hati itu nyata dan wajar kalau terasa sakit. Kamu boleh berduka atas apa yang hilang. Pelan-pelan, Allah sedang menjagakan sesuatu yang lebih baik, bahkan kalau belum terlihat sekarang.","Mencintai itu fitrah, dan rasa kehilangannya juga manusiawi. Yang penting, hatimu tidak ikut hancur bersamanya."],
-  ayat:["baqarah216","rum21"],hadis:["ajaib","istikharah"],doa:["hab"],
-  steps:["Izinkan dirimu berduka. Move on bukan lomba kecepatan.","Kurangi hal yang membuka luka lama: stalking medsos, chat lama. Mute atau jaga jarak dulu.","Perbaiki hubunganmu dengan Allah. Dia sebaik-baik penjaga hati.","Kalau memang ingin serius, tempuh jalan yang menenangkan: istikharah, libatkan keluarga, dan siapkan diri.","Isi waktu dengan olahraga, belajar, atau komunitas."],
-  affirm:"Yang pergi bukan akhir. Allah sedang menyiapkan yang lebih baik."},
- keluarga:{label:"Masalah keluarga",chip:"Keluarga",e:"🏠",c1:"#fb923c",c2:"#fcd34d",
-  kw:["ortu","orangtua","orang tua","=ayah","=ayahku","=ibu","=ibuku","=bapak","=bapakku","=papa","=papaku","=mama","=mamaku","=mamah","=bunda","=kakak","=adik","=abang","keluarga","saudara","broken home","brokenhome","dimarahin","dimarahi","dimarah","dibanding bandingin","orang tua bercerai","bertengkar","ribut di rumah"],
-  hug:["Masalah di rumah itu paling melelahkan karena tempat yang seharusnya paling aman justru terasa berat. Kamu tidak salah karena merasa lelah.","Hubungan dengan keluarga sering rumit karena penuh cinta sekaligus harapan. Kamu boleh sedih, dan kamu boleh mencari cara berbicara yang lebih baik."],
-  ayat:["isra23","hujurat10"],hadis:["keluarga","ridha"],doa:["walidain"],
-  steps:["Tahan dulu reaksi saat emosi. Cari waktu yang tenang untuk bicara.","Gunakan kalimat “aku merasa …” dan dengarkan juga sudut pandang mereka.","Libatkan orang yang dihormati keluarga (paman, bibi, guru) sebagai penengah.","Doakan mereka secara khusus setelah shalat.","Jika ada kekerasan atau kamu merasa tidak aman, utamakan keselamatanmu dan segera cari bantuan orang dewasa tepercaya atau lembaga perlindungan."],
-  affirm:"Aku boleh berbeda pendapat tanpa berhenti mencintai."},
- teman:{label:"Pertemanan & dikhianati",chip:"Pertemanan",e:"🤝",c1:"#2dd4bf",c2:"#67e8f9",
-  kw:["teman","sahabat","kawan","=bff","dikhianati","pengkhianat","khianat","dibully","bully","perundungan","difitnah","fitnah","gosip","digosipin","ghibah","dijauhi","dijauhin","dimusuhi","musuh","=toxic","rekan","atasan","berantem","dikucilin"],
-  hug:["Dikhianati atau dijauhi oleh orang yang kita percaya itu luka yang dalam. Kamu berhak kecewa. Tapi kamu juga berhak menjaga hatimu dari membalas dengan luka yang sama.","Hubungan yang rusak sering meninggalkan pertanyaan “aku salah apa?”. Pelan-pelan, kita pisahkan mana yang memang salahmu dan mana yang bukan."],
-  ayat:["fussilat34","hujurat10"],hadis:["cintai","katabaik"],doa:["hasbi"],
-  steps:["Bedakan fakta dan prasangka. Kalau memungkinkan, tabayyun (klarifikasi) langsung dengan baik.","Kalau kamu difitnah atau dibully, jangan dibalas dengan hal yang sama. Kumpulkan bukti dan lapor ke guru atau pihak berwenang bila perlu.","Jaga jarak sehat dari pergaulan yang toxic. Tidak perlu membenci, cukup menjauh.","Cari lingkungan yang menguatkan iman dan mentalmu."],
-  affirm:"Aku menjaga hatiku, bukan membalas lukanya."},
- rezeki:{label:"Rezeki & keuangan",chip:"Rezeki",e:"🪙",c1:"#facc15",c2:"#fde047",
-  kw:["uang","duit","hutang","utang","gaji","ekonomi","bokek","miskin","kemiskinan","=phk","pekerjaan","bekerja","pengangguran","nganggur","cari kerja","rezeki","bangkrut","bisnis","tagihan","cicilan","pinjol","biaya kuliah","=ukt","uang kuliah","=spp","dagang","kurang uang","gak punya uang","ga punya uang","tidak punya uang","kerja:.5","kerjaan:.5","usaha:.4"],
-  hug:["Soal uang dan masa depan memang bisa membuat dada sesak. Kamu sudah berusaha, dan itu terlihat dari betapa kamu memikirkannya. Rezeki itu luas, dan pintunya tidak hanya satu.","Kekurangan bukan tanda Allah membencimu. Banyak orang yang dicintai-Nya justru diuji di bagian ini, lalu diangkat setelah sabar dan ikhtiar."],
-  ayat:["talaq","insyirah"],hadis:["burung","rezekijiwa"],doa:["kafini"],
-  steps:["Catat pemasukan dan pengeluaran, lalu pangkas yang tidak perlu.","Tambah ikhtiar: belajar skill baru, kirim lamaran, perluas jaringan, atau mulai usaha kecil.","Jaga shalat dhuha dan sedekah kecil. Percayalah pada janji Allah.","Kalau ada utang, bicarakan dengan pemberi pinjaman dan ajukan jadwal bayar yang realistis. Hindari pinjol ilegal dan riba."],
-  affirm:"Rezekiku tidak akan tertukar. Aku berikhtiar, Allah mencukupkan."},
- sakit:{label:"Sakit & kesehatan",chip:"Sakit",e:"🩺",c1:"#5eead4",c2:"#86efac",
-  kw:["=sakit","=sakitku","penyakit","dirawat","opname","kemoterapi","kanker","demam","operasi","diagnosis","diagnosa","dokter","sembuh","kambuh","=icu","tumor","diabetes","asam lambung","maag","darah tinggi","migrain","rumah sakit"],
-  hug:["Sakit itu menguras fisik sekaligus hati. Kamu boleh lelah dan boleh takut. Dalam sakit, Allah menyiapkan penghapus dosa dan pengangkat derajat bagi hamba-Nya yang sabar.","Kamu tidak harus kuat setiap saat. Izinkan dirimu dirawat, baik oleh dokter, keluarga, maupun doa."],
-  ayat:["syuara80","baqarah155"],hadis:["musibah","obat"],doa:["syifa"],
-  steps:["Berobatlah ke dokter. Ikhtiar medis adalah bagian dari tawakal.","Letakkan tangan di bagian yang sakit, ucapkan bismillah 3 kali, lalu 7 kali “A'udzu billahi wa qudratihi min syarri ma ajidu wa uhadzir” (HR. Muslim).","Jaga pola makan dan istirahat, dan jangan ragu meminta bantuan keluarga.","Perbanyak dzikir dan doa, dan minta orang-orang yang menyayangimu mendoakan."],
-  affirm:"Allah Maha Penyembuh, dan aku berikhtiar sepenuh hati."},
- kehilangan:{label:"Kehilangan & duka",chip:"Kehilangan",e:"🕯️",c1:"#94a3b8",c2:"#cbd5e1",
-  kw:["meninggal:2","wafat:2","almarhum:2","almarhumah:2","berpulang:2","ditinggal pergi","kehilangan","=duka","berduka","dipanggil allah","innalillahi","inna lillahi","pemakaman","jenazah","kepergian","ditinggal:.6","ditinggalkan:.6"],
-  hug:["Turut berduka sedalam-dalamnya. Kehilangan orang yang kita sayang tidak pernah benar-benar “selesai”, dan itu tidak apa-apa. Menangis bukan berarti tidak ikhlas.","Rasa rindumu adalah bukti betapa besar cintamu. Doa yang kamu kirimkan akan sampai kepadanya."],
-  ayat:["baqarah155","baqarah153"],hadis:["menangis","sabarawal"],doa:["musibah"],
-  steps:["Beri dirimu waktu berduka. Menangis itu boleh, asal tidak meratap berlebihan.","Doakan almarhum: “Allahummaghfir lahu warhamhu wa 'afihi wa'fu 'anhu” (HR. Muslim), dan bersedekah atas namanya.","Jaga makan dan tidur, dan jangan memendam sendirian. Ceritakan kenangan baiknya kepada keluarga.","Kalau dukamu terasa menahan hidup berbulan-bulan, tidak apa-apa berkonsultasi ke psikolog."],
-  affirm:"Cinta tidak hilang. Ia berubah menjadi doa."},
- futur:{label:"Merasa jauh dari Allah",chip:"Jauh dari Allah",e:"🧭",c1:"#60a5fa",c2:"#fcd34d",
-  kw:["futur","males sholat","males shalat","malas sholat","malas shalat","males salat","malas salat","males ibadah","malas ibadah","jauh dari allah","jauh dari tuhan","jauh dari agama","iman turun","imanku turun","ibadah bolong","sholat bolong","shalat bolong","salat bolong","gak khusyuk","ga khusyuk","tidak khusyuk","nggak khusyuk","lalai","jarang ngaji","jarang sholat","jarang shalat","jarang salat","telat sholat","tinggal sholat","ninggalin sholat","meninggalkan sholat","meninggalkan shalat","hijrah","istiqomah","istiqamah","istikamah","ragu sama allah","ragu agama","kenapa allah","allah gak adil","allah tidak adil","marah sama allah","marah ke allah","kecewa sama allah","doa gak dikabul","doa tidak dikabul","doa belum dikabul","doa tak terjawab","hampa:.5"],
-  hug:["Naik turunnya iman itu dialami hampir semua orang, bahkan orang-orang saleh. Fakta bahwa kamu resah dan ingin kembali, itu sudah awal yang baik.","Kamu tidak sedang ditolak. Pintu-Nya tidak pernah dikunci. Mulailah dari yang paling kecil dan paling mungkin kamu lakukan hari ini."],
-  ayat:["hadid16","ankabut69"],hadis:["kontinu","mudah"],doa:["tsabbit"],
-  steps:["Mulai dari kecil: shalat tepat waktu dulu, sisanya menyusul pelan-pelan.","Cari teman saleh atau komunitas kajian. Iman butuh lingkungan.","Dengarkan murottal atau kajian ringan 10 menit sehari.","Jangan menunggu “siap”. Mulai sekarang dengan bismillah."],
-  affirm:"Aku mulai lagi, dan Allah menyambutku."},
- bingung:{label:"Bingung memilih",chip:"Bingung",e:"🧩",c1:"#c084fc",c2:"#93c5fd",
-  kw:["bingung","bimbang","ragu","dilema","pilih","memilih","keputusan","jurusan","istikharah","harus gimana","harus bagaimana","gimana ya","bagaimana ini","gak tahu harus","ga tahu harus","nggak tahu harus","tidak tahu harus","tersesat","arah hidup","tujuan hidup","mau jadi apa","resign","lanjut atau","pindah"],
-  hug:["Bingung memilih itu tanda kamu serius dengan hidupmu. Tidak apa-apa belum tahu jawabannya sekarang. Islam mengajarkan tiga hal: berpikir, bermusyawarah, lalu memohon petunjuk Allah.","Tidak ada pilihan yang sempurna, tapi ada pilihan yang diberkahi. Kita cari yang itu."],
-  ayat:["imran159","baqarah216"],hadis:["istikharah","kuat"],doa:["istikharah"],
-  steps:["Tulis pilihan-pilihanmu beserta untung ruginya dan nilai yang paling penting bagimu.","Minta pendapat orang bijak (orang tua, guru, mentor). Itu namanya musyawarah.","Shalat istikharah dan berdoa, lalu perhatikan kecenderungan hati dan kemudahan jalannya.","Setelah mantap, bertawakallah dan jalani. Evaluasi sambil jalan."],
-  affirm:"Aku berpikir, bermusyawarah, lalu bertawakal."},
- syukur:{label:"Bahagia & bersyukur",chip:"Bersyukur",e:"✨",c1:"#fcd34d",c2:"#fda4af",
-  kw:["bahagia","senang","bersyukur","alhamdulillah","lega","gembira","berhasil","lulus ujian","dapat kerja","beasiswa","juara","terharu","bangga"],
-  hug:["Masya Allah, senang sekali mendengarnya. Kebahagiaan juga layak diceritakan. Jangan lupa menyimpannya baik-baik di hati.","Alhamdulillah. Semoga nikmat ini membuatmu makin dekat dengan Allah dan makin bermanfaat bagi sekitar."],
-  ayat:["ibrahim7","duha11"],hadis:["syukurmanusia","duanikmat"],doa:["syukur"],
-  steps:["Sujud syukur atau shalat dua rakaat sebagai ungkapan terima kasih.","Bagikan kebahagiaanmu lewat sedekah atau traktir orang terdekat.","Tulis 3 nikmat yang paling kamu rasakan di jurnal syukur.","Jaga kerendahan hati dan konsistensi."],
-  affirm:"Alhamdulillah. Aku bersyukur dan akan terus berbagi."},
- umum:{label:"Campur aduk",chip:"",e:"🫧",c1:"#8b9bff",c2:"#6ee7f9",kw:[],
-  hug:["Aku belum bisa menebak perasaanmu dengan pas. Kadang hati memang campur aduk dan sulit dinamai, dan itu tidak apa-apa. Coba ceritakan sedikit lebih detail, atau pilih label perasaan di atas.","Perasaan yang belum punya nama tetap perasaan yang valid. Sementara itu, ini beberapa pegangan yang cocok untuk hampir semua kondisi hati."],
-  ayat:["insyirah","raad28"],hadis:["ajaib","musibah"],doa:["hasanah"],
-  steps:["Tulis tiga kalimat: apa yang terjadi, apa yang kurasakan, apa yang kubutuhkan.","Tarik napas dalam, istighfar, dan berwudu.","Shalat dua rakaat dan ceritakan semuanya kepada Allah.","Ceritakan ke satu orang yang kamu percaya."],
-  affirm:"Hatiku boleh belum paham. Allah paham."}
+ sedih:{kw:["sedih","nangis","galau","kecewa","hancur","terluka","sakithati","nyesek","sesak","patah semangat"],
+  text:"Pelan-pelan dulu ya. Sedih bukan tanda imanmu kurang. Allah Maha Dekat dengan hatimu yang sedang rapuh.",v:V.taubah40,h:H.musibah},
+ cemas:{kw:["cemas","takut","khawatir","overthink","panik","gelisah","resah","stres","tegang"],
+  text:"Tarik napas dulu. Banyak hal yang kamu takutkan belum tentu terjadi, serahkan sisanya kepada Allah.",v:V.raad28,h:H.ajaib},
+ marah:{kw:["marah","kesal","emosi","benci","jengkel","sebel","murka"],
+  text:"Rasa kesal itu valid. Redakan dulu amarahmu, ucapkan ta'awudz agar hatimu kembali dingin.",v:V.raad28,h:H.marah},
+ lelah:{kw:["capek","cape","lelah","burnout","penat","letih","tugas","skripsi","kuliah","kerja","lembur"],
+  text:"Kamu sudah berjuang keras hari ini. Istirahat sebentar ya, tubuh dan pikiranmu punya hak untuk tenang.",v:V.baqarah286,h:H.musibah},
+ keluarga:{kw:["ortu","orang tua","ibu","ayah","mama","papa","keluarga","rumah","berantem"],
+  text:"Hubungan dengan keluarga memang penuh dinamika. Rendahkan hati dan doakan mereka dalam sujudmu.",v:V.isra23,h:H.musibah},
+ rezeki:{kw:["uang","duit","hutang","utang","ekonomi","biaya","kuliah","spp","kos","pas-pasan"],
+  text:"Urusan rezeki sudah diatur dengan adil oleh Allah. Tetap ikhtiar terbaik dan qana'ah.",v:V.talaq,h:H.ajaib},
+ sakit:{kw:["sakit","demam","pusing","dokter","obat","lemas","badan"],
+  text:"Sakit adalah penggugur dosa. Tetap berobat ke dokter dan perbanyak istirahat.",v:V.syuara80,h:H.obat},
+ syukur:{kw:["syukur","senang","alhamdulillah","bahagia","lega"],
+  text:"Alhamdulillah! Nikmat ini patut disyukuri agar Allah limpahkan kebaikan yang lebih banyak.",v:V.ibrahim7,h:H.ajaib},
+ umum:{kw:[],
+  text:"Aku mendengarkan setiap kata dari cerita dan perasaanmu. Apapun yang kamu hadapi, sandarkan segalanya kepada Allah.",v:V.baqarah286,h:H.ajaib}
 };
 
-const HOOKS=[
- {re:/\b(ujian|skripsi|sidang|utbk|snbt|tugas akhir|ipk|nilai|belajar|olimpiade)\b/,doa:"syarah",step:"Buat jadwal belajar kecil: 25 menit fokus, 5 menit istirahat. Mulai dengan bismillah."},
- {re:/(utang|hutang|pinjol|cicilan|tagihan)/,doa:"kafini",step:"Urutkan semua utangmu dari yang paling mendesak. Hubungi pemberi pinjaman sebelum jatuh tempo untuk mengatur jadwal."},
- {re:/(doa.*(dikabul|belum|terjawab|gak dijawab|ga dijawab)|kenapa allah|allah.*(tega|adil))/,hadis:"dikabul",ayat:"ghafir60",step:"Teruslah berdoa. Terkabulnya doa bisa berupa dikabulkan, diganti yang lebih baik, atau ditunda sampai waktunya tepat."},
- {re:/(insomnia|susah tidur|gak bisa tidur|ga bisa tidur|nggak bisa tidur|tidak bisa tidur|begadang)/,step:"Sebelum tidur: berwudu, baca Ayat Kursi dan dzikir pelan, lalu letakkan HP jauh dari kasur."},
- {re:/(jodoh|menikah|nikah|taaruf|lamar|calon suami|calon istri)/,doa:"hab",step:"Soal jodoh, lakukan istikharah, minta pertimbangan orang tua atau orang bijak, dan perbaiki diri dengan sabar."},
- {re:/\b(iri|dibandingkan|dibanding|bandingin|membandingkan)\b/,ayat:"nisa32",hadis:"bawah"},
- {re:/(ghosting|diselingkuhi|selingkuh)/,step:"Kamu berhak diperlakukan dengan baik. Tidak semua yang terjadi adalah salahmu."},
- {re:/(bully|dibully|perundungan)/,step:"Perundungan bukan salahmu. Ceritakan ke guru, orang tua, atau konselor supaya kamu dibantu dan dilindungi."}
-];
-    const CRISIS_RE=/(bunuh diri|mengakhiri hidup|akhiri hidup|ngakhirin hidup|mengakhiri nyawa|(ingin|pengen|pengin|pingin|mau) (mati|meninggal|menghilang)|lebih baik (aku )?mati|(ga|gak|nggak|tidak|tak) (mau|ingin|pengen|pengin) hidup|ga ada gunanya hidup|gak ada gunanya hidup|tidak ada gunanya hidup|menyakiti diri|self ?harm|suicid|nyayat (tangan|nadi|lengan|kulit)|menyayat (tangan|nadi|lengan|kulit)|mengiris nadi|gantung diri|minum racun|(capek|lelah) hidup|hidup ini sia sia|melompat dari|loncat dari (gedung|jembatan|atap))/;
-
-function norm(t){
-  return ' '+t.toLowerCase()
-    .replace(/(.)\1{2,}/g,'$1$1')
-    .replace(/putus asa/g,'putusasa').replace(/sakit hati/g,'sakithati')
-    .replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ')+' ';
-}
-function hash(s){let h=7;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)}
-function analyze(raw,chips){
-  const n=norm(raw), toks=n.trim().split(' '), set=new Set(toks), scores={};
-  for(const id in C){
-    if(id==='umum'){scores[id]=0;continue}
-    let s=0;
-    for(const k of C[id].kw){
-      let kw=k,w=1; const m=k.match(/^(.*):(\d*\.?\d+)$/); if(m){kw=m[1];w=parseFloat(m[2])}
-      let hit;
-      if(kw[0]==='=') hit=set.has(kw.slice(1));
-      else if(kw.indexOf(' ')>-1) hit=n.indexOf(' '+kw)>-1;
-      else hit=toks.some(t=>t.startsWith(kw));
-      if(hit) s+=w;
+function getAIResponse(input){
+  const lower=input.toLowerCase();
+  for(let key in C){
+    if(key==='umum') continue;
+    for(let w of C[key].kw){
+      if(lower.includes(w)){
+        const matched=C[key];
+        return `<b>✨ FeelMe:</b><br>${matched.text}<br><div class="ar">${matched.v.ar}</div><div class="tr">"${matched.v.id}"</div><div class="ref">${matched.v.ref}</div><br><span style="font-size:0.88rem;color:var(--muted)">Ada hal lain lagi yang ingin kamu ceritakan? Aku mendengarkan. 🤍</span>`;
+      }
     }
-    scores[id]=s;
   }
-  (chips||[]).forEach(c=>{if(scores[c]!==undefined)scores[c]+=2.5});
-  const ranked=Object.keys(scores).map(id=>({id,score:scores[id]})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score);
-  const crisis=CRISIS_RE.test(n);
-  const primary=ranked.length?ranked[0].id:'umum';
-  let secondary=null;
-  if(ranked.length>1&&ranked[1].score>=Math.max(1,ranked[0].score*0.5)) secondary=ranked[1].id;
-  const hooks=HOOKS.filter(h=>h.re.test(n));
-  return {crisis,primary,secondary,ranked,hooks,seed:hash(raw)};
+  // Default umum jika tidak ada keyword cocok
+  return `<b>✨ FeelMe:</b><br>${C.umum.text}<br><div class="ar">${C.umum.v.ar}</div><div class="tr">"${C.umum.v.id}"</div><div class="ref">${C.umum.v.ref}</div><br><span style="font-size:0.88rem;color:var(--muted)">Ceritakan lagi apa yang sedang mengganjal di hatimu ya... 🤍</span>`;
 }
-function compose(a){
-  const c=C[a.primary];
-  const ayat=c.ayat.slice(), hadis=c.hadis.slice(), doa=c.doa.slice(), steps=c.steps.slice();
-  a.hooks.forEach(h=>{
-    if(h.ayat&&!ayat.includes(h.ayat))ayat.unshift(h.ayat);
-    if(h.hadis&&!hadis.includes(h.hadis))hadis.unshift(h.hadis);
-    if(h.doa&&!doa.includes(h.doa))doa.push(h.doa);
-    if(h.step)steps.push(h.step);
-  });
-  return {cat:c,hug:c.hug[a.seed%c.hug.length],
-    ayat:ayat.slice(0,2).map(k=>V[k]),hadis:hadis.slice(0,2).map(k=>H[k]),doa:doa.slice(0,2).map(k=>D[k]),
-    steps:steps.slice(0,6),second:a.secondary?C[a.secondary]:null,secondAyat:a.secondary?V[C[a.secondary].ayat[0]]:null};
-}
-if(typeof module!=='undefined')module.exports={analyze,compose,C,V,H,D};
-</script>
-<!-- ===================== UI ===================== -->
-<script>
-(function(){
-const $=s=>document.querySelector(s);
-const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const setTheme=(el,c)=>{el.style.setProperty('--c1',c.c1);el.style.setProperty('--c2',c.c2)};
-let lastText='',lastVerse=null,lastCat=null;
+  // Logika Kirim Chat Terus-Menerus
+const chatForm=document.getElementById('chatForm');
+const chatInput=document.getElementById('chatInput');
+const chatMessages=document.getElementById('chatMessages');
 
-/* ---------- bintang ---------- */
-(function sky(){
-  const cv=$('#sky'),cx=cv.getContext('2d');let W,H,stars=[],shoot=null;
-  function size(){const d=Math.min(devicePixelRatio||1,2);W=cv.width=innerWidth*d;H=cv.height=innerHeight*d;cx.setTransform(1,0,0,1,0,0);cx.scale(d,d);
-    stars=Array.from({length:Math.round(innerWidth*innerHeight/9000)},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.3+.2,p:Math.random()*6.28,s:Math.random()*.02+.005}))}
-  size();addEventListener('resize',size);
-  function draw(t){
-    cx.clearRect(0,0,innerWidth,innerHeight);
-    stars.forEach(s=>{const a=.35+.65*Math.abs(Math.sin(s.p+t*s.s*.06));cx.fillStyle='rgba(255,243,214,'+a+')';cx.beginPath();cx.arc(s.x,s.y,s.r,0,6.28);cx.fill()});
-    if(!shoot&&Math.random()<.003)shoot={x:Math.random()*innerWidth*.8,y:Math.random()*innerHeight*.4,l:0};
-    if(shoot){shoot.l+=14;const g=cx.createLinearGradient(shoot.x,shoot.y,shoot.x+shoot.l,shoot.y+shoot.l*.5);g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(255,255,255,.9)');cx.strokeStyle=g;cx.lineWidth=1.6;cx.beginPath();cx.moveTo(shoot.x+shoot.l-60,shoot.y+(shoot.l-60)*.5);cx.lineTo(shoot.x+shoot.l,shoot.y+shoot.l*.5);cx.stroke();if(shoot.l>320)shoot=null}
-    if(!reduce)requestAnimationFrame(draw);
-  }
-  requestAnimationFrame(draw);
-})();
-
-/* ---------- kata berganti di orb hero ---------- */
-(function typer(){
-  const words=[['sedih','sedih'],['cemas','cemas'],['lelah','lelah'],['bingung','bingung'],['minder','minder'],['rindu','cinta'],['syukur','syukur'],['tenang','umum']];
-  const el=$('#typed'),orb=$('#heroOrb');let i=0,j=0,del=false;
-  function tick(){
-    const [w,cat]=words[i];
-    if(!del){j++;el.textContent=w.slice(0,j);if(j===w.length){del=true;setTheme(orb,C[cat]);return setTimeout(tick,1500)}}
-    else{j--;el.textContent=w.slice(0,j);if(j===0){del=false;i=(i+1)%words.length}}
-    setTimeout(tick,del?55:110);
-  }
-  if(reduce){el.textContent='tenang'}else tick();
-})();
-
-/* ---------- chips ---------- */
-const chipBox=$('#chips');
-Object.keys(C).filter(k=>C[k].chip).forEach(k=>{
-  const b=document.createElement('button');b.type='button';b.className='chip';b.dataset.id=k;b.setAttribute('aria-pressed','false');
-  b.textContent=C[k].e+' '+C[k].chip;
-  b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
-  chipBox.appendChild(b);
-});
-const ta=$('#cerita'),cnt=$('#cnt'),hint=$('#hint');
-ta.addEventListener('input',()=>{cnt.textContent=ta.value.length;hint.textContent=''});
-$('#clear').onclick=()=>{ta.value='';cnt.textContent=0;$('#nama').value='';chipBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'));hint.textContent='';ta.focus()};
-
-/* ---------- submit ---------- */
-$('#form').addEventListener('submit',e=>{
+chatForm.addEventListener('submit', function(e){
   e.preventDefault();
-  const text=ta.value.trim(),chips=[...chipBox.querySelectorAll('[aria-pressed="true"]')].map(c=>c.dataset.id);
-  if(text.length<12&&!chips.length){hint.textContent='Ceritakan sedikit lebih panjang ya, atau pilih satu perasaan di atas supaya aku bisa membantumu.';$('#form').classList.remove('shake');void $('#form').offsetWidth;$('#form').classList.add('shake');return}
-  const a=analyze(text,chips);
-  const loader=$('#loader'),msgs=['Menyimak ceritamu…','Membaca perasaan di balik kata-katamu…','Mencari ayat yang paling pas…','Menyiapkan pelukan untukmu…'];
-  setTheme($('#loadOrb'),C[a.primary]);loader.hidden=false;let k=0;$('#loadMsg').textContent=msgs[0];
-  const iv=setInterval(()=>{k=(k+1)%msgs.length;$('#loadMsg').textContent=msgs[k]},700);
-  setTimeout(()=>{clearInterval(iv);loader.hidden=true;show(a,text,$('#nama').value.trim())},reduce?200:2600);
+  const text=chatInput.value.trim();
+  if(!text) return;
+
+  // 1. Tampilkan pesan User
+  const userMsg=document.createElement('div');
+  userMsg.className='msg user';
+  userMsg.textContent=text;
+  chatMessages.appendChild(userMsg);
+  chatInput.value='';
+  chatMessages.scrollTop=chatMessages.scrollHeight;
+
+  // 2. Simulasi AI mengetik / merespons setelah 800ms
+  setTimeout(()=>{
+    const aiMsg=document.createElement('div');
+    aiMsg.className='msg ai';
+    aiMsg.innerHTML=getAIResponse(text);
+    chatMessages.appendChild(aiMsg);
+    chatMessages.scrollTop=chatMessages.scrollHeight;
+  }, 800);
 });
-    /* ---------- tampilkan hasil ---------- */
-function show(a,text,name){
-  const sec=$('#hasil'),box=$('#hasilBox');sec.hidden=false;
-  if(a.crisis){
-    box.innerHTML=`<div class="glass card crisis"><h2>${name?esc(name)+', a':'A'}ku ikut khawatir padamu 🤍</h2>
-    <p>Apa yang kamu tulis menunjukkan rasa sakit yang sangat berat. Perasaan ini nyata, dan kamu tidak harus menanggungnya sendirian. Kamu berharga, dan ada orang yang bisa membantumu malam ini.</p>
-    <ol><li><b>Jangan sendirian sekarang.</b> Temui atau telepon orang yang kamu percaya (keluarga, sahabat, guru, ustaz/ustazah) dan katakan: “aku sedang tidak baik-baik saja, tolong temani aku.”</li>
-    <li>Jauhkan benda yang bisa dipakai untuk menyakiti dirimu.</li>
-    <li>Jika kamu merasa dalam bahaya saat ini, segera hubungi layanan darurat atau datang ke IGD terdekat.</li>
-    <li>Bicara dengan tenaga profesional (psikolog/psikiater) sangat membantu. Kemenkes menyediakan layanan kesehatan jiwa lewat 119 ext. 8 (periksa kembali nomor terbaru di situs resmi Kemenkes).</li></ol>
-    <a class="tel" href="tel:112">📞 Hubungi 112</a><a class="tel" href="tel:119">📞 Hubungi 119</a>
-    <div class="actions" style="justify-content:flex-start;margin-top:16px"><button class="btn btn-ghost" id="goOn">Aku mau lanjut membaca penguatan hati</button></div></div>`;
-    setTheme(box,C.sedih);
-    $('#goOn').onclick=()=>{const b=analyze(text,['sedih']);b.crisis=false;show(b,text,name)};
-    scrollTo2(sec);return;
-  }
-  const r=compose(a),c=r.cat;setTheme(sec,c);lastCat=c;lastVerse=r.ayat[0];
-  const snippet=pickSnippet(text);
-  const also=r.second?`Ada juga rasa <b>${r.second.e} ${r.second.label}</b> yang terbaca dari ceritamu.`:'';
-  const greet=name?`${esc(name)}, terima kasih sudah mau bercerita.`:'Terima kasih sudah mau bercerita.';
-  const ayatHTML=r.ayat.map(v=>`<article class="glass card reveal"><span class="tag">📖 Dari Al-Qur'an</span><p class="ar" lang="ar">${v.ar}</p><p class="tr">${esc(v.id)}</p><p class="ref">${v.ref}</p></article>`).join('');
-  const hadisHTML=r.hadis.map(h=>`<article class="glass card hadis reveal"><span class="tag">🕌 Dari Sunnah</span><p>${esc(h.t)}</p><p class="ref">${h.r}</p></article>`).join('');
-  const doaHTML=r.doa.map(d=>`<article class="glass card reveal"><span class="tag">🤲 Doa untukmu</span><p class="ar" lang="ar">${d.ar}</p><p class="lat">${esc(d.lat)}</p><p class="tr">${esc(d.arti)}</p><p class="ref">${d.ref}</p></article>`).join('');
-  const stepsHTML=r.steps.map((s,i)=>`<li><label><input type="checkbox" data-i="${i}"><span>${esc(s)}</span></label></li>`).join('');
-  const secHTML=r.second?`<article class="glass card second reveal"><span class="tag">${r.second.e} Rasa kedua: ${r.second.label}</span><p>Pegangan singkat untuk bagian hatimu yang ini:</p><p class="mini-ar" lang="ar">${r.secondAyat.ar}</p><p class="tr" style="text-align:left">${esc(r.secondAyat.id)} <span style="color:var(--gold)">(${r.secondAyat.ref})</span></p><p style="margin-top:10px"><b>Langkah kecil:</b> ${esc(r.second.steps[0])}</p></article>`:'';
-  box.innerHTML=`
-   <div class="res-head reveal"><div class="orb"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div></div>
-   <div><span class="eyebrow">Yang terbaca dari ceritamu</span><h2>${c.e} ${c.label}</h2><p class="also">${also}</p></div></div>
-   <p class="greet reveal">${greet}</p>
-   ${snippet?`<blockquote class="echo reveal">“${esc(snippet)}”</blockquote>`:''}
-   <p class="hug reveal">${esc(r.hug)}</p>
-   ${a.primary==='umum'?'<p class="hug reveal" style="color:var(--gold2)">Tips: tulis apa yang terjadi, bagaimana perasaanmu, dan apa yang paling kamu butuhkan.</p>':''}
-   ${ayatHTML}<div class="grid2">${hadisHTML}</div>${doaHTML}
-   <article class="glass card reveal"><span class="tag">🌿 Langkah kecil untuk hari ini</span>
-     <ul class="chk">${stepsHTML}</ul><div class="bar"><i id="barfill"></i></div><p class="barmsg" id="barmsg">Centang yang sudah kamu lakukan. Sedikit demi sedikit pun berarti.</p></article>
-   ${secHTML}
-   <p class="affirm reveal"><small>Ucapkan pelan-pelan pada dirimu</small>“${esc(c.affirm)}”</p>
-   <div class="actions"><button class="btn btn-gold" id="cp">📋 Salin jawaban</button><button class="btn btn-ghost" id="dl">🖼️ Simpan kartu ayat</button><a class="btn btn-ghost" href="#napas">🌬️ Tenangkan napas</a><button class="btn btn-ghost" id="again">✍️ Curhat lagi</button></div>
-   <p class="disc">Jawaban ini dihasilkan otomatis dari kata-kata ceritamu, bukan fatwa dan bukan pengganti ustaz atau tenaga profesional. Jika perasaanmu terasa terlalu berat, ceritakan kepada orang yang kamu percaya.</p>`;
-  // checklist
-  const boxes=box.querySelectorAll('ul.chk input'),fill=$('#barfill'),bm=$('#barmsg');
-  boxes.forEach(b=>b.onchange=()=>{const n=[...boxes].filter(x=>x.checked).length;fill.style.width=(n/boxes.length*100)+'%';
-    bm.textContent=n===boxes.length?'Masya Allah, semua langkah selesai. Semoga Allah menguatkanmu 🌙':n+' dari '+boxes.length+' langkah selesai'});
-  // salin
-  lastText=[`FeelMe — ${c.label}`,'',r.hug,'',...r.ayat.map(v=>`${v.id} (${v.ref})`),'',...r.hadis.map(h=>`${h.t} (${h.r})`),'',...r.doa.map(d=>`${d.lat}\n${d.arti} (${d.ref})`),'','Langkah kecil:',...r.steps.map((s,i)=>`${i+1}. ${s}`),'',`“${c.affirm}”`].join('\n');
-  $('#cp').onclick=async function(){try{await navigator.clipboard.writeText(lastText);this.textContent='✅ Tersalin'}catch(e){this.textContent='Tidak bisa menyalin'}setTimeout(()=>this.textContent='📋 Salin jawaban',1800)};
-  $('#dl').onclick=downloadCard;
-  $('#again').onclick=()=>{sec.hidden=true;$('#curhat').scrollIntoView({behavior:'smooth'});ta.value='';cnt.textContent=0;chipBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'))};
-  observe();scrollTo2(sec);
-}
-function scrollTo2(el){setTimeout(()=>el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}),60)}
-function pickSnippet(t){
-  const s=t.replace(/\s+/g,' ').trim();if(s.length<20)return '';
-  const first=s.split(/(?<=[.!?])\s/)[0];
-  const out=first.length>=20?first:s;
-  return out.length>120?out.slice(0,117).trim()+'…':out;
-}
 
-/* ---------- kartu ayat (PNG) ---------- */
-async function downloadCard(){
-  if(!lastVerse)return;
-  try{await Promise.all([document.fonts.load('48px Amiri'),document.fonts.load('italic 30px Fraunces')])}catch(e){}
-  const W=1080,H=1350,cv=document.createElement('canvas');cv.width=W;cv.height=H;const x=cv.getContext('2d');
-  let g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,'#070b1f');g.addColorStop(1,'#1c1655');x.fillStyle=g;x.fillRect(0,0,W,H);
-  [[200,260,lastCat.c1],[900,1100,lastCat.c2]].forEach(([px,py,col])=>{const r=x.createRadialGradient(px,py,0,px,py,520);r.addColorStop(0,col+'88');r.addColorStop(1,'transparent');x.fillStyle=r;x.fillRect(0,0,W,H)});
-  for(let i=0;i<90;i++){x.fillStyle='rgba(255,243,214,'+(Math.random()*.7+.2)+')';x.beginPath();x.arc(Math.random()*W,Math.random()*H,Math.random()*1.8+.3,0,6.28);x.fill()}
-  x.strokeStyle='rgba(246,198,103,.5)';x.lineWidth=2;x.strokeRect(50,50,W-100,H-100);
-  x.textAlign='center';x.fillStyle='#f6c667';x.font='600 30px "Plus Jakarta Sans",sans-serif';x.fillText('✦  F E E L M E  ✦',W/2,150);
-  function wrap(txt,font,maxW,rtl){x.font=font;x.direction=rtl?'rtl':'ltr';const w=txt.split(' '),lines=[];let l='';w.forEach(k=>{const t=l?l+' '+k:k;if(x.measureText(t).width>maxW&&l){lines.push(l);l=k}else l=t});if(l)lines.push(l);return lines}
-  let y=300;const ar=wrap(lastVerse.ar,'52px Amiri,serif',W-240,true);
-  x.fillStyle='#fff8e6';ar.forEach(l=>{x.fillText(l,W/2,y);y+=96});
-  y+=40;x.direction='ltr';x.fillStyle='#e7ebff';
-  wrap('“'+lastVerse.id+'”','italic 36px Fraunces,Georgia,serif',W-220,false).forEach(l=>{x.fillText(l,W/2,y);y+=56});
-  y+=30;x.direction='ltr';x.fillStyle='#f6c667';x.font='600 30px "Plus Jakarta Sans",sans-serif';x.fillText(lastVerse.ref,W/2,y);
-  x.fillStyle='rgba(255,255,255,.55)';x.font='24px "Plus Jakarta Sans",sans-serif';x.fillText('Dari FeelMe • teman curhat Islami',W/2,H-110);
-  const a=document.createElement('a');a.download='feelme-ayat.png';a.href=cv.toDataURL('image/png');a.click();
+// Efek teks berganti di hero
+const words=[['sedih','sedih'],['cemas','cemas'],['lelah','lelah'],['keluarga','keluarga'],['rezeki','rezeki'],['tenang','umum']];
+const el=document.getElementById('typed');
+let i=0,j=0,del=false;
+function tick(){
+  if(!el) return;
+  const [w]=words[i];
+  if(!del){j++;el.textContent=w.slice(0,j);if(j===w.length){del=true;return setTimeout(tick,1500)}}
+  else{j--;el.textContent=w.slice(0,j);if(j===0){del=false;i=(i+1)%words.length}}
+  setTimeout(tick,del?55:110);
 }
-
-/* ---------- napas berdzikir ---------- */
-(function(){
-  const br=$('#breath'),ph=$('#phase'),bw=$('#bword'),btn=$('#bbtn'),cy=$('#bcycle');let run=false,timer=null,cycles=0;
-  const seq=[['Tarik napas…',4,'بِسْمِ اللَّهِ',1],['Tahan…',4,'حَسْبُنَا اللَّهُ',1],['Hembuskan pelan…',6,'الْحَمْدُ لِلَّهِ',.62]];
-  function step(i){
-    if(!run)return;const [t,d,w,sc]=seq[i];ph.textContent=t;bw.textContent=w;
-    br.style.transitionDuration=(i===1?0.3:d)+'s';br.style.transform='scale('+sc+')';
-    timer=setTimeout(()=>{if(i===2){cycles++;cy.textContent='Siklus selesai: '+cycles;if(cycles>=5){stop(true);return}}step((i+1)%3)},d*1000);
-  }
-  function stop(done){run=false;clearTimeout(timer);btn.textContent='Mulai';br.style.transitionDuration='1s';br.style.transform='scale(.62)';ph.textContent=done?'Alhamdulillah, semoga lebih tenang 🌙':'Siap?'}
-  btn.onclick=()=>{if(run){stop(false)}else{run=true;cycles=0;cy.textContent='';btn.textContent='Berhenti';step(0)}};
-})();
-
-/* ---------- tasbih ---------- */
-(function(){
-  const dz=[['سُبْحَانَ اللَّهِ','Subhanallah'],['الْحَمْدُ لِلَّهِ','Alhamdulillah'],['اللَّهُ أَكْبَرُ','Allahu Akbar']];
-  let n=0,r=0;const tc=$('#tcount'),dzEl=$('#dz'),lab=$('#tlabel');
-  function paint(){tc.textContent=n;dzEl.textContent=dz[r][0];lab.textContent=dz[r][1]+' • putaran '+(r+1)+' dari 3'}
-  $('#tas').onclick=()=>{n++;if(navigator.vibrate)navigator.vibrate(8);if(n>33){n=1;r++}if(r>2){r=0;n=0;lab.textContent='Alhamdulillah, 99 selesai 🌙';tc.textContent='✓';return}paint()};
-  $('#treset').onclick=()=>{n=0;r=0;paint()};paint();
-})();
-
-/* ---------- reveal ---------- */
-function observe(){
-  const els=document.querySelectorAll('.reveal:not(.in)');
-  if(!('IntersectionObserver' in window)||reduce){els.forEach(e=>e.classList.add('in'));return}
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-  els.forEach(e=>io.observe(e));
+tick();
+  // Napas Berdzikir Script
+const br=document.getElementById('breath'),ph=document.getElementById('phase'),bw=document.getElementById('bword'),btn=document.getElementById('bbtn'),cy=document.getElementById('bcycle');
+let run=false,timer=null,cycles=0;
+const seq=[['Tarik napas…',4,'بِسْمِ اللَّهِ',1],['Tahan…',4,'حَسْبُنَا اللَّهُ',1],['Hembuskan pelan…',6,'الْحَمْدُ لِلَّهِ',.62]];
+function step(idx){
+  if(!run)return;const [t,d,w,sc]=seq[idx];ph.textContent=t;bw.textContent=w;
+  br.style.transitionDuration=(idx===1?0.3:d)+'s';br.style.transform='scale('+sc+')';
+  timer=setTimeout(()=>{if(idx===2){cycles++;cy.textContent='Siklus selesai: '+cycles;if(cycles>=5){stop(true);return}}step((idx+1)%3)},d*1000);
 }
-observe();
-})();
+function stop(done){run=false;clearTimeout(timer);btn.textContent='Mulai';br.style.transitionDuration='1s';br.style.transform='scale(.62)';ph.textContent=done?'Alhamdulillah, semoga lebih tenang 🌙':'Siap?'}
+if(btn){btn.onclick=()=>{if(run){stop(false)}else{run=true;cycles=0;cy.textContent='';btn.textContent='Berhenti';step(0)}};}
+
+// Tasbih Digital
+let n=0,r=0;const tc=document.getElementById('tcount'),dzEl=document.getElementById('dz'),lab=document.getElementById('tlabel'),tasBtn=document.getElementById('tas'),tRes=document.getElementById('treset');
+const dzList=[['سُبْحَانَ اللَّهِ','Subhanallah'],['الْحَمْدُ لِلَّهِ','Alhamdulillah'],['اللَّهُ أَكْبَرُ','Allahu Akbar']];
+function paint(){if(tc)tc.textContent=n;if(dzEl)dzEl.textContent=dzList[r][0];if(lab)lab.textContent=dzList[r][1]+' • putaran '+(r+1)+' dari 3'}
+if(tasBtn){tasBtn.onclick=()=>{n++;if(navigator.vibrate)navigator.vibrate(8);if(n>33){n=1;r++}if(r>2){r=0;n=0;if(lab)lab.textContent='Alhamdulillah, 99 selesai 🌙';if(tc)tc.textContent='✓';return}paint()};}
+if(tRes){tRes.onclick=()=>{n=0;r=0;paint()};}
+paint();
 </script>
 </body>
-</html>                                                                                                                                                                                      }
+</html>
