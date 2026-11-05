@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
@@ -25,8 +25,7 @@ a{color:inherit}
 .wrap{width:min(1080px,100% - 32px);margin-inline:auto}
 button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
-
-/* NAV */
+ /* NAV */
 .nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:linear-gradient(to bottom,rgba(7,11,31,.85),rgba(7,11,31,.4));border-bottom:1px solid rgba(255,255,255,.06)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:1.35rem;text-decoration:none;letter-spacing:.2px}
@@ -41,7 +40,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .btn-ghost:hover{background:rgba(255,255,255,.11);transform:translateY(-2px)}
 .btn[disabled]{opacity:.5;pointer-events:none}
 @media(max-width:720px){.nav ul{display:none}}
-  /* HERO */
+
+/* HERO */
 .hero{padding:clamp(40px,8vw,90px) 0 40px}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);font-weight:600}
@@ -71,12 +71,13 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1;min-height:260px}.moon{right:2%}}
 
 /* SECTIONS */
-section{padding:clamp(40px,7vw,80px) 0}
+ section{padding:clamp(40px,7vw,80px) 0}
 .sec-head{max-width:640px;margin-bottom:30px}
 .sec-head h2{font-family:var(--serif);font-size:clamp(1.9rem,4.2vw,2.8rem);line-height:1.12;margin:10px 0 10px;letter-spacing:-.01em}
 .sec-head p{color:var(--muted)}
 .glass{background:var(--card);border:1px solid var(--line);border-radius:26px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.08)}
-  /* FORM */
+
+/* FORM */
 .form{padding:clamp(20px,4vw,38px)}
 .row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
 label.lbl{display:block;font-size:.82rem;color:var(--muted);margin-bottom:8px;font-weight:600;letter-spacing:.03em}
@@ -106,8 +107,9 @@ textarea{min-height:140px;resize:vertical;line-height:1.7}
 .loader .orb{width:170px;margin:0 auto 26px;animation:breathe 4s ease-in-out infinite}
 .loader p{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold2);min-height:2em}
 @keyframes breathe{0%,100%{transform:scale(.86)}50%{transform:scale(1.08)}}
-  /* RESULT */
-#hasil{--c1:#8b9bff;--c2:#6ee7f9}
+
+/* RESULT */
+ #hasil{--c1:#8b9bff;--c2:#6ee7f9}
 .res-head{display:flex;align-items:center;gap:22px;margin-bottom:22px;flex-wrap:wrap}
 .res-head .orb{width:120px;flex:none}
 .res-head h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1}
@@ -149,7 +151,7 @@ ul.chk input:checked+span{text-decoration:line-through;opacity:.55}
 .reveal.in{opacity:1;transform:none}
 
 /* NAPAS */
-.napas{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+ .napas{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .panel{padding:clamp(20px,3vw,32px);text-align:center}
 .panel h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:6px}
 .panel p.s{color:var(--muted);font-size:.9rem;margin-bottom:18px}
@@ -161,7 +163,8 @@ ul.chk input:checked+span{text-decoration:line-through;opacity:.55}
 .tasbih b{font-size:3rem;font-family:var(--serif);line-height:1}
 .dz{font-family:var(--ar);font-size:1.8rem;color:var(--gold2);min-height:3rem}
 @media(max-width:760px){.napas{grid-template-columns:1fr}}
-  /* CARA & TENTANG */
+
+/* CARA & TENTANG */
 .steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;counter-reset:s}
 .st{padding:26px;counter-increment:s;position:relative}
 .st::before{content:counter(s);font-family:var(--serif);font-size:3rem;font-weight:700;color:var(--gold);opacity:.8;display:block;line-height:1;margin-bottom:12px}
@@ -200,7 +203,7 @@ footer strong{color:var(--gold2)}
 
 <main id="top">
   <!-- HERO -->
-  <section class="hero">
+   <section class="hero">
     <div class="wrap">
       <div>
         <span class="eyebrow">Curhat Islami • Tanpa daftar</span>
@@ -219,6 +222,7 @@ footer strong{color:var(--gold2)}
       </div>
     </div>
   </section>
+
   <!-- HASIL / RIWAYAT CHAT -->
   <section id="hasil" hidden aria-live="polite">
     <div class="wrap">
@@ -258,7 +262,7 @@ footer strong{color:var(--gold2)}
   </section>
 
   <!-- NAPAS -->
-  <section id="napas">
+   <section id="napas">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Tenangkan diri</span>
@@ -285,6 +289,7 @@ footer strong{color:var(--gold2)}
       </div>
     </div>
   </section>
+
   <!-- CARA -->
   <section id="cara">
     <div class="wrap">
@@ -338,6 +343,7 @@ footer strong{color:var(--gold2)}
 <div class="loader" id="loader" hidden role="status">
   <div><div class="orb" id="loadOrb"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div></div><p id="loadMsg">Menyimak ceritamu…</p></div>
 </div>
+
 <!-- ===================== DATA + ENGINE (murni, tanpa DOM) ===================== -->
 <script id="engine">
 const V={
@@ -372,7 +378,7 @@ const V={
  ankabut69:{ar:"وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا",id:"Orang-orang yang bersungguh-sungguh di jalan Kami, pasti Kami tunjukkan jalan-jalan Kami.",ref:"QS. Al-'Ankabut: 69"},
  hadid16:{ar:"أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَن تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ",id:"Belum tibakah waktunya bagi orang-orang beriman untuk khusyuk hati mereka mengingat Allah?",ref:"QS. Al-Hadid: 16"}
 };
-  const H={
+const H={
  musibah:{t:"Tidaklah seorang muslim ditimpa kelelahan, sakit, kekhawatiran, kesedihan, gangguan, sampai duri yang menusuknya, kecuali Allah menghapus sebagian kesalahannya dengan itu.",r:"HR. Bukhari & Muslim"},
  ajaib:{t:"Urusan orang beriman itu menakjubkan: semuanya baik baginya. Jika diberi kelapangan ia bersyukur, itu baik. Jika ditimpa kesulitan ia bersabar, itu pun baik.",r:"HR. Muslim"},
  pena:{t:"Ketahuilah, seandainya seluruh manusia berkumpul untuk memberimu manfaat atau mencelakakanmu, mereka tidak mampu kecuali sebatas yang telah Allah tetapkan. Pena telah diangkat dan lembaran telah kering.",r:"HR. Tirmidzi (dari Ibnu 'Abbas)"},
@@ -387,9 +393,22 @@ const V={
  bawah:{t:"Lihatlah orang yang berada di bawahmu, jangan melihat orang yang di atasmu. Itu lebih pantas agar kamu tidak meremehkan nikmat Allah atas dirimu.",r:"HR. Muslim"},
  bertaubat:{t:"Setiap anak Adam pasti pernah berbuat salah, dan sebaik-baik orang yang bersalah adalah yang banyak bertobat.",r:"HR. Tirmidzi & Ibnu Majah"},
  iringi:{t:"Bertakwalah kepada Allah di mana pun kamu berada, iringilah keburukan dengan kebaikan niscaya kebaikan itu menghapusnya, dan bergaullah dengan manusia dengan akhlak yang baik.",r:"HR. Tirmidzi"},
- cintai:{t:"Tidak sempurna iman seseorang di antara kalian sampai ia mencintai untuk saudaranya apa yang ia mencintai untuk dirinya sendiri.",r:"HR. Bukhari & Muslim"},
+ cintai:{t:"Tidak sempurna iman seseorang di antara kalian sampai ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.",r:"HR. Bukhari & Muslim"},
  katabaik:{t:"Barangsiapa beriman kepada Allah dan hari akhir, hendaklah ia berkata baik atau diam.",r:"HR. Bukhari & Muslim"},
- bantu:{t:"Allah akan senantiasa menolong hamba selama const D={
+ bantu:{t:"Allah akan senantiasa menolong hamba selama hamba itu menolong saudaranya.",r:"HR. Muslim"},
+ senyum:{t:"Senyummu kepada saudaramu adalah sedekah.",r:"HR. Tirmidzi"},
+ keluarga:{t:"Sebaik-baik kalian adalah yang terbaik kepada keluarganya, dan aku adalah yang terbaik di antara kalian kepada keluargaku.",r:"HR. Tirmidzi"},
+ obat:{t:"Allah tidak menurunkan penyakit kecuali Dia juga menurunkan obatnya.",r:"HR. Bukhari"},
+ menangis:{t:"Saat putranya, Ibrahim, wafat, Nabi ﷺ bersabda: “Mata meneteskan air mata, hati bersedih, dan kami tidak mengucapkan kecuali yang diridai Tuhan kami.”",r:"HR. Bukhari"},
+ sabarawal:{t:"Sesungguhnya sabar itu ada pada benturan pertama (saat musibah baru menimpa).",r:"HR. Bukhari & Muslim"},
+ kontinu:{t:"Amal yang paling dicintai Allah adalah yang terus-menerus dilakukan, meskipun sedikit.",r:"HR. Bukhari & Muslim"},
+ istikharah:{t:"Jika salah seorang kalian bingung dalam suatu urusan, hendaklah ia shalat dua rakaat (di luar shalat wajib), lalu berdoa istikharah.",r:"HR. Bukhari"},
+ syukurmanusia:{t:"Siapa yang tidak berterima kasih kepada manusia, berarti ia belum bersyukur kepada Allah.",r:"HR. Abu Dawud & Tirmidzi"},
+ duanikmat:{t:"Dua nikmat yang sering membuat manusia tertipu: kesehatan dan waktu luang.",r:"HR. Bukhari"},
+ dikabul:{t:"Doa salah seorang kalian akan dikabulkan selama ia tidak tergesa-gesa, yaitu berkata “aku sudah berdoa tapi belum juga dikabulkan.”",r:"HR. Bukhari & Muslim"},
+ ridha:{t:"Rida Allah ada pada rida orang tua, dan murka Allah ada pada murka orang tua.",r:"HR. Tirmidzi"}
+};
+const D={
  hamm:{ar:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ",lat:"Allahumma inni a'udzu bika minal hammi wal hazan, wal 'ajzi wal kasal, wal bukhli wal jubn, wa dhala'id dayni wa ghalabatir rijal.",arti:"Ya Allah, aku berlindung kepada-Mu dari gelisah dan sedih, lemah dan malas, kikir dan pengecut, lilitan utang dan tekanan orang lain.",ref:"HR. Bukhari"},
  yunus:{ar:"لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",lat:"La ilaha illa anta subhanaka inni kuntu minazh zhalimin.",arti:"Tiada Tuhan selain Engkau, Maha Suci Engkau, sungguh aku termasuk orang yang zalim terhadap diriku sendiri.",ref:"QS. Al-Anbiya: 87"},
  hasbi:{ar:"حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",lat:"Hasbiyallahu la ilaha illa huwa, 'alaihi tawakkaltu wa huwa rabbul 'arsyil 'azhim.",arti:"Cukuplah Allah bagiku, tiada Tuhan selain Dia. Hanya kepada-Nya aku bertawakal, dan Dia Tuhan pemilik 'Arsy yang agung.",ref:"QS. At-Taubah: 129"},
@@ -409,7 +428,7 @@ const V={
  walidain:{ar:"رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",lat:"Rabbirhamhuma kama rabbayani shaghira.",arti:"Ya Tuhanku, sayangilah keduanya sebagaimana mereka mendidikku sewaktu kecil.",ref:"QS. Al-Isra: 24"},
  hasanah:{ar:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",lat:"Rabbana atina fid dunya hasanah, wa fil akhirati hasanah, wa qina 'adzaban nar.",arti:"Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka.",ref:"QS. Al-Baqarah: 201"}
 };
-
+ 
 /* kw: awalan "=" berarti kata persis; mengandung spasi berarti frasa; "kata:0.5" memberi bobot. */
 const C={
  sedih:{label:"Sedih & kecewa",chip:"Sedih",e:"🌧️",c1:"#7b8cff",c2:"#8ec5ff",
@@ -423,7 +442,7 @@ const C={
   hug:["Pikiranmu lagi ramai sekali ya. Cemas tandanya kamu peduli, tapi kamu tidak harus memikul semua kemungkinan sendirian. Ada bagian yang memang bukan wilayah kendalimu, itu urusan Allah.","Tarik napas dulu. Banyak hal yang kamu takutkan belum tentu terjadi, dan kalaupun terjadi, kamu tidak berjalan sendirian."],
   ayat:["raad28","baqarah286"],hadis:["pena","burung"],doa:["hasbi"],
   steps:["Tarik napas 4 detik, tahan 4, hembuskan 6 sambil berdzikir. Coba fitur Napas Berdzikir di bawah.","Tulis semua yang kamu khawatirkan, lalu tandai mana yang bisa kamu kerjakan hari ini dan mana yang harus diserahkan kepada Allah.","Kerjakan satu langkah kecil dari bagian yang bisa kamu kendalikan, lalu bertawakal.","Kurangi scroll media sosial dan berita menjelang tidur."],
-  affirm:"Aku sudah berusaha. Sisanya kuserahkan kepada Allah."},hamba itu menolong saudaranya.",r:"HR. Muslim"},
+  affirm:"Aku sudah berusaha. Sisanya kuserahkan kepada Allah."},
  marah:{label:"Marah & kesal",chip:"Marah",e:"🔥",c1:"#fb7185",c2:"#fdba74",
   kw:["marah","kesal","kesel","emosi","benci","dendam","jengkel","sebel","murka","geram","dongkol","muak","naik darah","pengen teriak","pengin teriak"],
   hug:["Marahmu bisa dimengerti. Ada hal yang memang menyakitkan. Hanya saja jangan sampai kamu yang terbakar paling parah. Kita redakan dulu, baru putuskan langkahnya.","Rasa kesal itu sinyal bahwa ada batasmu yang dilanggar. Itu valid. Yang perlu dijaga adalah cara kita menyalurkannya, supaya tidak menyisakan penyesalan."],
@@ -516,7 +535,7 @@ const C={
 };
 
 const HOOKS=[
- {re:/\b(ujian|skripsi|sidang|utbk|snbt|tugas akhir|ipk|nilai|belajar|olimpiade)\b/,doa:"syarah",step:"Buat jadwal belajar kecil: 25 menit fokus, 5 menit istirahat. Mulai dengan bismillah."},
+  {re:/\b(ujian|skripsi|sidang|utbk|snbt|tugas akhir|ipk|nilai|belajar|olimpiade)\b/,doa:"syarah",step:"Buat jadwal belajar kecil: 25 menit fokus, 5 menit istirahat. Mulai dengan bismillah."},
  {re:/(utang|hutang|pinjol|cicilan|tagihan)/,doa:"kafini",step:"Urutkan semua utangmu dari yang paling mendesak. Hubungi pemberi pinjaman sebelum jatuh tempo untuk mengatur jadwal."},
  {re:/(doa.*(dikabul|belum|terjawab|gak dijawab|ga dijawab)|kenapa allah|allah.*(tega|adil))/,hadis:"dikabul",ayat:"ghafir60",step:"Teruslah berdoa. Terkabulnya doa bisa berupa dikabulkan, diganti yang lebih baik, atau ditunda sampai waktunya tepat."},
  {re:/(insomnia|susah tidur|gak bisa tidur|ga bisa tidur|nggak bisa tidur|tidak bisa tidur|begadang)/,step:"Sebelum tidur: berwudu, baca Ayat Kursi dan dzikir pelan, lalu letakkan HP jauh dari kasur."},
@@ -525,7 +544,8 @@ const HOOKS=[
  {re:/(ghosting|diselingkuhi|selingkuh)/,step:"Kamu berhak diperlakukan dengan baik. Tidak semua yang terjadi adalah salahmu."},
  {re:/(bully|dibully|perundungan)/,step:"Perundungan bukan salahmu. Ceritakan ke guru, orang tua, atau konselor supaya kamu dibantu dan dilindungi."}
 ];
-  const CRISIS_RE=/(bunuh diri|mengakhiri hidup|akhiri hidup|ngakhirin hidup|mengakhiri nyawa|(ingin|pengen|pengin|pingin|mau) (mati|meninggal|menghilang)|lebih baik (aku )?mati|(ga|gak|nggak|tidak|tak) (mau|ingin|pengen|pengin) hidup|ga ada gunanya hidup|gak ada gunanya hidup|tidak ada gunanya hidup|menyakiti diri|self ?harm|suicid|nyayat (tangan|nadi|lengan|kulit)|menyayat (tangan|nadi|lengan|kulit)|mengiris nadi|gantung diri|minum racun|(capek|lelah) hidup|hidup ini sia sia|melompat dari|loncat dari (gedung|jembatan|atap))/;
+
+const CRISIS_RE=/(bunuh diri|mengakhiri hidup|akhiri hidup|ngakhirin hidup|mengakhiri nyawa|(ingin|pengen|pengin|pingin|mau) (mati|meninggal|menghilang)|lebih baik (aku )?mati|(ga|gak|nggak|tidak|tak) (mau|ingin|pengen|pengin) hidup|ga ada gunanya hidup|gak ada gunanya hidup|tidak ada gunanya hidup|menyakiti diri|self ?harm|suicid|nyayat (tangan|nadi|lengan|kulit)|menyayat (tangan|nadi|lengan|kulit)|mengiris nadi|gantung diri|minum racun|(capek|lelah) hidup|hidup ini sia sia|melompat dari|loncat dari (gedung|jembatan|atap))/;
 
 function norm(t){
   return ' '+t.toLowerCase()
@@ -558,7 +578,7 @@ function analyze(raw,chips){
   const hooks=HOOKS.filter(h=>h.re.test(n));
   return {crisis,primary,secondary,ranked,hooks,seed:hash(raw)};
 }
-  function compose(a){
+function compose(a){
   const c=C[a.primary];
   const ayat=c.ayat.slice(), hadis=c.hadis.slice(), doa=c.doa.slice(), steps=c.steps.slice();
   a.hooks.forEach(h=>{
@@ -576,7 +596,7 @@ if(typeof module!=='undefined')module.exports={analyze,compose,C,V,H,D};
 
 <!-- ===================== UI & CHAT CONTINUOUS ENGINE ===================== -->
 <script>
-(function(){
+ (function(){
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -600,7 +620,8 @@ let lastVerse=null, lastCat=null;
   }
   requestAnimationFrame(draw);
 })();
-  /* ---------- kata berganti di orb hero ---------- */
+
+/* ---------- kata berganti di orb hero ---------- */
 (function typer(){
   const words=[['sedih','sedih'],['cemas','cemas'],['lelah','lelah'],['bingung','bingung'],['minder','minder'],['rindu','cinta'],['syukur','syukur'],['tenang','umum']];
   const el=$('#typed'),orb=$('#heroOrb');let i=0,j=0,del=false;
@@ -626,7 +647,7 @@ ta.addEventListener('input',()=>{cnt.textContent=ta.value.length;hint.textConten
 $('#clear').onclick=()=>{ta.value='';cnt.textContent=0;hint.textContent='';ta.focus()};
 
 /* ---------- submit & chat lanjutan ---------- */
-$('#form').addEventListener('submit',e=>{
+ $('#form').addEventListener('submit',e=>{
   e.preventDefault();
   const text=ta.value.trim(),chips=[...chipBox.querySelectorAll('[aria-pressed="true"]')].map(c=>c.dataset.id);
   if(text.length<3&&!chips.length){hint.textContent='Tulis sesuatu dulu ya...';$('#form').classList.remove('shake');void $('#form').offsetWidth;$('#form').classList.add('shake');return}
@@ -635,6 +656,7 @@ $('#form').addEventListener('submit',e=>{
   const loader=$('#loader'),msgs=['Menyimak ceritamu…','Membaca perasaan di balik kata-katamu…','Mencari ayat yang paling pas…','Menyiapkan balasan menenangkan…'];
   setTheme($('#loadOrb'),C[a.primary]);loader.hidden=false;let k=0;$('#loadMsg').textContent=msgs[0];
   const iv=setInterval(()=>{k=(k+1)%msgs.length;$('#loadMsg').textContent=msgs[k]},600);
+  
   setTimeout(()=>{
     clearInterval(iv);
     loader.hidden=true;
@@ -676,7 +698,8 @@ function appendMessage(a,text,name){
     const hadisHTML=r.hadis.map(h=>`<article class="glass card hadis reveal"><span class="tag">🕌 Dari Sunnah</span><p>${esc(h.t)}</p><p class="ref">${h.r}</p></article>`).join('');
     const doaHTML=r.doa.map(d=>`<article class="glass card reveal"><span class="tag">🤲 Doa untukmu</span><p class="ar" lang="ar">${d.ar}</p><p class="lat">${esc(d.lat)}</p><p class="tr">${esc(d.arti)}</p><p class="ref">${d.ref}</p></article>`).join('');
     const stepsHTML=r.steps.map((s,i)=>`<li><label><input type="checkbox"><span>${esc(s)}</span></label></li>`).join('');
-  aiBubble.innerHTML=`
+
+    aiBubble.innerHTML=`
       <div class="res-head reveal"><div class="orb"><div class="b b1"></div><div class="b b2"></div><div class="b b3"></div></div>
       <div><span class="eyebrow">Balasan FeelMe</span><h2>${c.e} ${c.label}</h2></div></div>
       <p class="greet reveal">${greet}</p>
@@ -691,7 +714,7 @@ function appendMessage(a,text,name){
   chatHistoryArray.push(text);
 
   // Ubah tampilan UI agar siap untuk balasan berikutnya
-  $('#formEyebrow').textContent = "Lanjutkan cerita";
+   $('#formEyebrow').textContent = "Lanjutkan cerita";
   $('#formTitle').textContent = "Ada lagi yang mau kamu sampaikan?";
   $('#formDesc').textContent = "Tulis balasanmu di bawah. FeelMe akan terus mendengarkan dan menjawab setiap curhatanmu.";
   $('#nameRow').style.display = "none";
@@ -713,7 +736,8 @@ $('#resetChatBtn').onclick = () => {
   $('#resetChatBtn').style.display = "none";
   $('#curhat').scrollIntoView({behavior:'smooth'});
 };
-  /* ---------- napas berdzikir ---------- */
+
+/* ---------- napas berdzikir ---------- */
 (function(){
   const br=$('#breath'),ph=$('#phase'),bw=$('#bword'),btn=$('#bbtn'),cy=$('#bcycle');let run=false,timer=null,cycles=0;
   const seq=[['Tarik napas…',4,'بِسْمِ اللَّهِ',1],['Tahan…',4,'حَسْبُنَا اللَّهُ',1],['Hembuskan pelan…',6,'الْحَمْدُ لِلَّهِ',.62]];
